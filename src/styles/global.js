@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   :focus-visible {
     outline: 0;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.primary};
@@ -14,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, button, input, textarea {
-    font: 400 1rem ${({ theme }) => theme.font.family};
+    font: 400 1.6rem ${({ theme }) => theme.font.family};
   }
 
   a {

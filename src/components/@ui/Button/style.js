@@ -15,9 +15,9 @@ const colorVariants = {
 };
 
 const sizes = {
-  small: { padding: "6px 12px", fontSize: "14px" },
-  medium: { padding: "8px 16px", fontSize: "16px" },
-  large: { padding: "10px 20px", fontSize: "18px" },
+  small: { padding: "0.6rem 1.2rem", fontSize: "1.4rem" },
+  medium: { padding: "0.8rem 1.6rem", fontSize: "1.6rem" },
+  large: { padding: "1rem 2rem", fontSize: "1.8rem" },
 };
 
 const baseStyles = css`
