@@ -1,9 +1,15 @@
-import { HeaderStyle } from "./style";
+import React from 'react';
+import Logo from '../Logo';
 
-export function Header() {
+function Header() {
   return (
-    <HeaderStyle>
-      <h1>Header</h1>
-    </HeaderStyle>
+    <header style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem' }}>
+      <Logo />
+      <nav>
+        <a href="/">Home</a> | <a href="/products">Products</a>
+      </nav>
+    </header>
   );
 }
+
+export default Header;

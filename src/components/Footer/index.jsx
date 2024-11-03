@@ -1,9 +1,11 @@
-import { FooterStyle } from "./style";
+import React from 'react';
 
-export function Footer() {
+function Footer() {
   return (
-    <FooterStyle>
-      <h1>Footer</h1>
-    </FooterStyle>
+    <footer style={{ backgroundColor: '#1F1F1F', color: '#FFFFFF', padding: '1rem', textAlign: 'center' }}>
+      Drip Store © 2024
+    </footer>
   );
 }
+
+export default Footer;
