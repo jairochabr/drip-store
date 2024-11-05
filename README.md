@@ -1,1 +1,0 @@
-# DRIP STORE - GERAÇÃO TECH

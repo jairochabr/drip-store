@@ -1,0 +1,24 @@
+.produtos-em-alta {
+  padding: 20px;
+}
+
+.produtos-em-alta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.produtos-em-alta h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: 6.25rem;
+}
+
+.ver-todos {
+  color: #c92071;
+  text-decoration: none;
+  font-size: 1.125rem;
+  margin-right: 6.25rem;
+}

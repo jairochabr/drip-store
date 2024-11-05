@@ -1,0 +1,45 @@
+.collectionIcons {
+  width: 104px;
+  height: 138px;
+
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  position: relative;
+  text-align: center;
+}
+
+.IconsCard {
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  opacity: 0px;
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 1.3rem 3rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.collection-card:hover {
+  transform: scale(1.05);
+}
+
+.collection-label {
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 2px;
+  z-index: 1;
+  position: relative;
+  width: 100%; /* Garantindo que o elemento ocupe 100% do espaço disponível */
+  max-width: 200px;
+  word-wrap: break-word;
+}
