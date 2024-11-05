@@ -29,4 +29,9 @@ export const GlobalStyle = createGlobalStyle`
   a, img, span {
     display: inline-block;
   }
+
+  img {
+  max-width: 100%;
+  height: auto;
+}
 `;

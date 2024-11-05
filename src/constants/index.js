@@ -1,5 +1,7 @@
 import sneakers from "@/assets/sneakers.png";
+import offerImg from "@/assets/offer.png";
 
+// src/pages/HomePage/Carousel/index.jsx
 export const SLIDES = [
   {
     id: 1,
@@ -38,3 +40,13 @@ export const SLIDES = [
     imageSrc: `${sneakers}`,
   },
 ];
+
+// src/pages/HomePage/Offer/index.jsx
+export const OFFER_SECTION = {
+  subtitle: "Oferta especial",
+  title: "Air Jordan edição de colecionador",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+  buttonLabel: "Ver Oferta",
+  imageSrc: `${offerImg}`,
+};
