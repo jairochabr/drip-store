@@ -1,0 +1,67 @@
+ 
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 0px 100px 100px;
+  }
+  
+  .produto {
+    position: relative;
+    background-color: #f8f9fd;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 1px var(--light-gray-3);
+    transition: transform 0.2s ease;
+  }
+  
+  .produto:hover {
+    transform: scale(1.03);
+  }
+  
+  .desconto {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #e7ff86;
+    color: #474747;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 29px;
+    font-size: 0.8rem;
+  }
+  
+  .produto-imagem {
+    background-color: #ffff;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .categoria {
+    color: #777;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .nome {
+    font-size: 1.5rem;
+    color: #474747;
+    margin: 5px 0 10px;
+  }
+  
+  .preco-antigo {
+    text-decoration: line-through;
+    color: #8f8f8f;
+    font-size: 1.5rem;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  
+  .preco-novo {
+    font-size: 1.5rem;
+    color: #1f1f1f;
+    font-weight: bold;
+    display: inline-block;
+  }
+  

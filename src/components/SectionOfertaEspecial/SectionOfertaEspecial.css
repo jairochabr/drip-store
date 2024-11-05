@@ -1,0 +1,48 @@
+.Ofertaescpecial {
+    display: flex;
+    gap: 68px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    padding: 50px;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29.125rem;
+    height: 29.125rem;
+    border-radius: 50%;
+    position: relative;
+    overflow:visible;
+    background: linear-gradient(-20deg, var(--white)45%, var(--light-gray-2));
+}
+
+.circleImg {
+    width: 35.8125rem;
+    height: 20.6255rem;
+    object-fit: cover;
+}
+
+.h1OfertaEspacial{
+    margin-bottom: 17px;
+    size: 14px;
+    color: var(--primary);
+}
+
+.h2OfertaEspecial{
+    size: 48px;
+    color: var( --dark-gray-2);
+}
+
+.Airjordan {
+width: 589px;
+height: 112px;
+line-height: 28px;
+margin-top: 20px;
+}
+
+.divTextosOferta{
+    margin-left: 68px;
+}

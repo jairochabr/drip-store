@@ -1,0 +1,34 @@
+
+.divFotosCarrosel{
+    display: flex;
+    align-items: start;
+    width: 70%;
+}
+
+.sapatoCarrosel{
+    height: 650px;
+    width: auto;
+    animation: subirDescer 2s ease-in-out infinite; 
+}
+
+.divSapatoCarrosel{
+    transition: 0.5s;
+    height: 100%;
+}
+
+.divSapatoCarrosel:hover{
+    transform: rotate(19.34deg);
+    transition: 0.5s;
+}
+
+@keyframes subirDescer {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
