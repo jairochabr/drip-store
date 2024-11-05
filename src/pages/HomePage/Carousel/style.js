@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button } from "@/components/@ui/Button";
-import ornamentSvg from "@/assets/Ornament.svg";
+import { Ornament } from "@/assets";
+
 
 export const CarouselStyle = styled.div`
   height: 681px;
@@ -10,7 +11,7 @@ export const CarouselStyle = styled.div`
 
   &::before {
     content: "";
-    background-image: url(${ornamentSvg});
+    background-image: url(${Ornament});
     height: 140px;
     width: 140px;
     position: absolute;
