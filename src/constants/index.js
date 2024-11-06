@@ -1,4 +1,4 @@
-import { sneakers, offerImg } from "@/assets";
+import { TENNIS } from "@/assets";
 
 // src/pages/HomePage/Carousel/index.jsx
 export const SLIDES = [
@@ -9,7 +9,7 @@ export const SLIDES = [
     description:
       "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.",
     buttonText: "Ver Ofertas",
-    imageSrc: sneakers,
+    imageSrc: TENNIS.sneakers,
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const SLIDES = [
     description:
       "Descubra os últimos lançamentos da Nike com designs inovadores e tecnologia de ponta.",
     buttonText: "Explorar Coleção",
-    imageSrc: sneakers,
+    imageSrc: TENNIS.sneakers,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const SLIDES = [
     description:
       "Aproveite descontos incríveis em nossa linha de tênis de corrida. Oferta válida enquanto durarem os estoques.",
     buttonText: "Comprar Agora",
-    imageSrc: sneakers,
+    imageSrc: TENNIS.sneakers,
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const SLIDES = [
     description:
       "Aproveite descontos incríveis em nossa linha de tênis de esportivos. Oferta válida enquanto durarem os estoques.",
     buttonText: "Comprar Agora",
-    imageSrc: sneakers,
+    imageSrc: TENNIS.sneakers,
   },
 ];
 
@@ -47,5 +47,5 @@ export const OFFER_SECTION = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
   buttonText: "Ver Oferta",
-  imageSrc: offerImg,
+  imageSrc: TENNIS.dunkHigh,
 };
