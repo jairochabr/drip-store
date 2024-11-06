@@ -19,7 +19,7 @@ export function OfferSection() {
             <p className="subtitle">{OFFER_SECTION.subtitle}</p>
             <h2 className="title">{OFFER_SECTION.title}</h2>
             <p className="description">{OFFER_SECTION.description}</p>
-            <Button>{OFFER_SECTION.buttonLabel}</Button>
+            <Button>{OFFER_SECTION.buttonText}</Button>
           </TextContent>
         </ContentStyle>
       </ContainerStyle>
