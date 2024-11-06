@@ -1,10 +1,17 @@
-import offerImg from './offer.png'
 import Ornament from './Ornament.svg'
-import sneakers from './sneakers.png'
 
+// Tennis
+import SneakersImg from './tennis/sneakers.png'
+import KSwissImg from './tennis/k-swiss-v8.png'
+import DunkHighImg from './tennis/dunk-high.png'
 
+export const TENNIS = {
+  sneakers: SneakersImg,
+  kSwiss: KSwissImg,
+  dunkHigh: DunkHighImg
+}
+
+// other images
 export {
-  offerImg,
-  Ornament,
-  sneakers
+  Ornament
 }
