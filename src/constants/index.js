@@ -7,14 +7,14 @@ export const SLIDES = [
     subtitle: "Melhores ofertas personalizadas",
     title: "Queima de estoque Nike 🔥",
     description:
-      "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.",
+      "Aproveite descontos especiais em produtos selecionados. Ofertas exclusivas com até 30% de desconto na linha Nike.",
     buttonText: "Ver Ofertas",
     imageSrc: TENNIS.sneakers,
   },
   {
     id: 2,
     subtitle: "Novos modelos disponíveis",
-    title: "Coleção Exclusiva Nike",
+    title: "Coleção Exclusiva Nike 👟",
     description:
       "Descubra os últimos lançamentos da Nike com designs inovadores e tecnologia de ponta.",
     buttonText: "Explorar Coleção",
@@ -23,7 +23,7 @@ export const SLIDES = [
   {
     id: 3,
     subtitle: "Promoção por tempo limitado",
-    title: "50% OFF em tênis de corrida",
+    title: "50% OFF em tênis de corrida 🏃‍➡️",
     description:
       "Aproveite descontos incríveis em nossa linha de tênis de corrida. Oferta válida enquanto durarem os estoques.",
     buttonText: "Comprar Agora",
@@ -31,11 +31,11 @@ export const SLIDES = [
   },
   {
     id: 4,
-    subtitle: "Promoção por tempo limitado",
-    title: "30% OFF em tênis esportivos",
+    subtitle: "Edição Especial",
+    title: "Nike Air Jordan Retro 🏀",
     description:
-      "Aproveite descontos incríveis em nossa linha de tênis de esportivos. Oferta válida enquanto durarem os estoques.",
-    buttonText: "Comprar Agora",
+      "Chegaram os novos Air Jordan Retro. Design clássico com tecnologia moderna para quadra e estilo.",
+    buttonText: "Ver Coleção",
     imageSrc: TENNIS.sneakers,
   },
 ];
