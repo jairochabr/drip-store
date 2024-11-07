@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { Button } from "@/components/@ui/Button";
 import { Ornament } from "@/assets";
 
-
 export const CarouselStyle = styled.div`
-  height: 681px;
+  height: 68.1rem;
   position: relative;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.lightGray3};
@@ -12,19 +11,19 @@ export const CarouselStyle = styled.div`
   &::before {
     content: "";
     background-image: url(${Ornament});
-    height: 140px;
-    width: 140px;
+    height: 14rem;
+    width: 14rem;
     position: absolute;
     right: 7.5rem;
     top: 6.2rem;
   }
 
   @media (max-width: 540px) {
-    height: 662px;
+    height: 66.2rem;
 
     &::before {
-      right: -72px;
-      top: 20px;
+      right: -7.2rem;
+      top: 2rem;
     }
   }
 `;
@@ -42,22 +41,22 @@ export const SlideStyles = styled.div`
 `;
 
 export const ContentStyle = styled.div`
-  margin-block: 104px 50px;
+  margin-block: 10.4rem 5rem;
   max-width: 121rem;
-  padding-inline: 20px;
+  padding-inline: 2rem;
   margin-inline: auto;
   display: flex;
-  gap: 68px;
+  gap: 4rem;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     text-align: center;
-    margin-block: 60px 92px;
+    margin-block: 6rem 9.2rem;
   }
 `;
 
 export const TextContent = styled.div`
-  max-width: 512px;
+  max-width: 56.4rem;
 
   @media (max-width: 768px) {
     margin-inline: auto;
@@ -67,11 +66,11 @@ export const TextContent = styled.div`
 export const Subtitle = styled.p`
   color: ${({ theme }) => theme.colors.warning};
   font-weight: 700;
-  line-height: 24px;
+  line-height: 2.4rem;
   letter-spacing: 0.75px;
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -79,25 +78,25 @@ export const Subtitle = styled.p`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.darkGray};
-  font-size: 64px;
+  font-size: 6.4rem;
   font-weight: 800;
-  line-height: 66px;
+  line-height: 6.6rem;
   letter-spacing: 1px;
-  margin-block: 20px;
+  margin-block: 2rem;
 
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 3.6rem;
     line-height: 1.25;
-    margin-block: 10px 20px;
+    margin-block: 1rem 2rem;
   }
 `;
 
 export const Description = styled.p`
   color: ${({ theme }) => theme.colors.darkGray2};
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 1.8rem;
+  line-height: 3.4rem;
   letter-spacing: 0.75px;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   @media (max-width: 768px) {
     font-size: 1.4rem;
@@ -108,18 +107,18 @@ export const Description = styled.p`
 `;
 
 export default styled(Button)`
-  width: 220px;
-  height: 48px;
+  width: 22rem;
+  height: 4.8rem;
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 30rem;
   }
 `;
 
 export const ImageContent = styled.div`
   margin-right: 62px;
-  width: 608px;
-  height: 405px;
+  width: 60.8rem;
+  height: 40.5rem;
 
   img {
     max-width: 100%;
@@ -127,32 +126,32 @@ export const ImageContent = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 250px;
-    height: 186px;
+    width: 25rem;
+    height: 18.6rem;
     margin: auto;
   }
 
   @media (max-width: 540px) {
-    width: 220px;
-    height: 156px;
+    width: 22rem;
+    height: 15.6rem;
   }
 `;
 
 export const DotsStyles = styled.div`
   position: absolute;
-  bottom: 52px;
+  bottom: 5.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 
   @media (max-width: 768px) {
-    bottom: 40px;
+    bottom: 4rem;
   }
 `;
 
 export const Dot = styled.button`
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   border: none;
   margin: 0 5px;
