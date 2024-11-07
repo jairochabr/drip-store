@@ -23,7 +23,7 @@ export const SLIDES = [
   {
     id: 3,
     subtitle: "Promoção por tempo limitado",
-    title: "50% OFF em tênis de corrida 🏃‍➡️",
+    title: "50% OFF em tênis de corrida",
     description:
       "Aproveite descontos incríveis em nossa linha de tênis de corrida. Oferta válida enquanto durarem os estoques.",
     buttonText: "Comprar Agora",
