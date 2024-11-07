@@ -32,7 +32,7 @@ export const SLIDES = [
   {
     id: 4,
     subtitle: "Edição Especial",
-    title: "Nike Air Jordan Retro 🏀",
+    title: "Tênis Nike Air Jordan Retro 🏀",
     description:
       "Chegaram os novos Air Jordan Retro. Design clássico com tecnologia moderna para quadra e estilo.",
     buttonText: "Ver Coleção",
