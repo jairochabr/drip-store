@@ -36,4 +36,23 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  body::-webkit-scrollbar {
+    width: 1.6rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.lightGray3};
+    border-radius: 8px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.primary};
+    border: 4px solid ${({ theme }) => theme.colors.lightGray3};
+    border-radius: 8px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
