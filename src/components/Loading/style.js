@@ -14,7 +14,7 @@ const spin = keyframes`
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) scale(0.9);
+    transform: rotate(180deg) scale(0.8);
   }
   100% {
     transform: rotate(360deg) scale(1);
@@ -42,7 +42,7 @@ const colorPulse = keyframes`
 const slideIn = keyframes`
   0% {
     opacity: 0;
-    transform: translateX(-15px);
+    transform: translateX(-24px);
   }
   100% {
     opacity: 1;
