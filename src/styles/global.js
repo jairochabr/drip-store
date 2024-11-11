@@ -55,4 +55,10 @@ export const GlobalStyle = createGlobalStyle`
   body::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.colors.tertiary};
   }
+
+  .container {
+    max-width: calc(117rem + 4rem);
+    padding-inline: 2rem;
+    margin-inline: auto;
+  }
 `;
