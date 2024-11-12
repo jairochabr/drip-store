@@ -1,15 +1,17 @@
-import { Button } from "@/components/@ui/Button";
 import styled from "styled-components";
+import { Button } from "@/components/@ui/Button";
 
-export const OfferStyles = styled.section``;
+export const Offer = styled.section`
+  width: 100%;
+`;
 
-export const ContainerStyle = styled.div`
+export const Container = styled.div`
   max-width: calc(117rem + 4rem);
   padding-inline: 2rem;
   margin-inline: auto;
 `;
 
-export const ContentStyle = styled.div`
+export const Content = styled.div`
   margin-block: 8.6rem 0;
   display: flex;
   gap: 6.7rem;
@@ -71,7 +73,7 @@ export const TextContent = styled.div`
   }
 `;
 
-export default styled(Button)`
+export const OfferButton = styled(Button)`
   padding: 1.6rem 6rem;
   color: ${({ theme }) => theme.colors.lightGray3};
   font-size: 14px;

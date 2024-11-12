@@ -1,7 +1,7 @@
 import { Loading } from "@/components/Loading";
 import { Carousel } from "./Carousel";
 import { FeaturedSection } from "./Featured";
-import { OfferSection } from "./Offer";
+import { SpecialOffer } from "./SpecialOffer";
 
 export function HomePage() {
   return (
@@ -9,7 +9,7 @@ export function HomePage() {
       <Loading />
       <Carousel />
       <FeaturedSection />
-      <OfferSection />
+      <SpecialOffer />
     </>
   );
 }

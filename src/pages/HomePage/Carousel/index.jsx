@@ -1,93 +1,53 @@
 import { SLIDES } from "@/constants";
-import { useCallback, useEffect, useRef, useState } from "react";
-import Button, {
-  CarouselStyle,
-  ContentStyle,
-  Description,
-  Dot,
-  DotsStyles,
-  ImageContent,
-  SlideContainer,
-  SlideStyles,
-  Subtitle,
-  TextContent,
-  Title,
-} from "./style";
+import { useCallback, useEffect, useState } from "react";
+import * as Styled from "./style";
 
-const TRANSITION_DELAY = 50;
 const SLIDE_INTERVAL = 5000;
+const TOTAL_SLIDES = SLIDES.length;
 
 export function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transition, setTransition] = useState(true);
-  const slideRef = useRef(null);
-  const totalSlides = SLIDES.length;
+  const slidesToRender = [...SLIDES, SLIDES[0]];
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => {
-      if (prevIndex === totalSlides) {
-        setTransition(false);
-        return 0;
-      } else {
-        setTransition(true);
-        return prevIndex + 1;
-      }
-    });
-  }, [totalSlides]);
+    setCurrentIndex(prevIndex => prevIndex === TOTAL_SLIDES ? 0 : prevIndex + 1);
+    setTransition(currentIndex < TOTAL_SLIDES);
+  }, [currentIndex]);
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, SLIDE_INTERVAL);
-    return () => clearInterval(intervalId);
+    const interval = setInterval(nextSlide, SLIDE_INTERVAL);
+    return () => clearInterval(interval);
   }, [nextSlide]);
 
-  useEffect(() => {
-    if (!transition) {
-      const timeout = setTimeout(() => {
-        setTransition(true);
-        setCurrentIndex(1);
-      }, TRANSITION_DELAY);
-      return () => clearTimeout(timeout);
-    }
-  }, [transition]);
-
-  const goToSlide = useCallback((index) => {
-    setCurrentIndex(index);
-    setTransition(true);
-  }, []);
-
-  function renderSlides() {
-    const slidesToRender = [...SLIDES, SLIDES[0]];
-    return slidesToRender.map((slide, index) => (
-      <SlideStyles key={index}>
-        <ContentStyle>
-          <TextContent>
-            <Subtitle>{slide.subtitle}</Subtitle>
-            <Title>{slide.title}</Title>
-            <Description>{slide.description}</Description>
-            <Button>{slide.buttonText}</Button>
-          </TextContent>
-          <ImageContent>
-            <img src={slide.imageSrc} alt={slide.title} />
-          </ImageContent>
-        </ContentStyle>
-      </SlideStyles>
-    ));
-  }
-
   return (
-    <CarouselStyle>
-      <SlideContainer ref={slideRef} $transition={transition} $currentIndex={currentIndex}>
-        {renderSlides()}
-      </SlideContainer>
-      <DotsStyles>
+    <Styled.Carousel>
+      <Styled.Container $transition={transition} $currentIndex={currentIndex}>
+        {slidesToRender.map((slide, index) => (
+          <Styled.Slide key={index}>
+            <Styled.Content>
+              <Styled.TextContent>
+                <p className="Subtitle">{slide.subtitle}</p>
+                <h1 className="Title">{slide.title}</h1>
+                <p className="Description">{slide.description}</p>
+                <Styled.SlideButton>{slide.buttonText}</Styled.SlideButton>
+              </Styled.TextContent>
+              <Styled.ImageContent>
+                <img src={slide.imageSrc} alt={slide.title} />
+              </Styled.ImageContent>
+            </Styled.Content>
+          </Styled.Slide>
+        ))}
+      </Styled.Container>
+      <Styled.Dots>
         {SLIDES.map((_, index) => (
-          <Dot
+          <Styled.Dot
             key={index}
-            $active={index === currentIndex % totalSlides}
-            onClick={() => goToSlide(index)}
+            $active={index === currentIndex % TOTAL_SLIDES}
+            onClick={() => setCurrentIndex(index)}
           />
         ))}
-      </DotsStyles>
-    </CarouselStyle>
+      </Styled.Dots>
+    </Styled.Carousel>
   );
 }
