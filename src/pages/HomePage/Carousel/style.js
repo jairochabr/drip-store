@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button } from "@/components/@ui/Button";
 import { Ornament } from "@/assets";
 
-export const CarouselStyle = styled.div`
+export const Carousel = styled.div`
   height: 68.1rem;
   position: relative;
   overflow: hidden;
@@ -28,7 +28,7 @@ export const CarouselStyle = styled.div`
   }
 `;
 
-export const SlideContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   transition: ${(props) =>
     props.$transition ? "transform 0.5s ease" : "none"};
@@ -36,11 +36,11 @@ export const SlideContainer = styled.div`
   transform: translateX(-${(props) => props.$currentIndex * 100}%);
 `;
 
-export const SlideStyles = styled.div`
+export const Slide = styled.div`
   flex: 0 0 100%;
 `;
 
-export const ContentStyle = styled.div`
+export const Content = styled.div`
   margin-block: 10.4rem 5rem;
   max-width: 121rem;
   padding-inline: 2rem;
@@ -58,55 +58,55 @@ export const ContentStyle = styled.div`
 export const TextContent = styled.div`
   max-width: 56.4rem;
 
+  .Subtitle {
+    color: ${({ theme }) => theme.colors.warning};
+    font-weight: 700;
+    line-height: 2.4rem;
+    letter-spacing: 0.75px;
+  }
+
+  .Title {
+    color: ${({ theme }) => theme.colors.darkGray};
+    font-size: 6.4rem;
+    font-weight: 800;
+    line-height: 6.6rem;
+    letter-spacing: 1px;
+    margin-block: 2rem;
+  }
+
+  .Description {
+    color: ${({ theme }) => theme.colors.darkGray2};
+    font-size: 1.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.75px;
+    margin-bottom: 4rem;
+  }
+
   @media (max-width: 768px) {
     margin-inline: auto;
+
+    .Subtitle {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+
+    .Title {
+      font-size: 3.6rem;
+      line-height: 1.25;
+      margin-block: 1rem 2rem;
+    }
+
+    .Description {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.57;
+      letter-spacing: 0.2496px;
+    }
   }
 `;
 
-export const Subtitle = styled.p`
-  color: ${({ theme }) => theme.colors.warning};
-  font-weight: 700;
-  line-height: 2.4rem;
-  letter-spacing: 0.75px;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
-export const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.darkGray};
-  font-size: 6.4rem;
-  font-weight: 800;
-  line-height: 6.6rem;
-  letter-spacing: 1px;
-  margin-block: 2rem;
-
-  @media (max-width: 768px) {
-    font-size: 3.6rem;
-    line-height: 1.25;
-    margin-block: 1rem 2rem;
-  }
-`;
-
-export const Description = styled.p`
-  color: ${({ theme }) => theme.colors.darkGray2};
-  font-size: 1.8rem;
-  line-height: 3.4rem;
-  letter-spacing: 0.75px;
-  margin-bottom: 4rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.57;
-    letter-spacing: 0.2496px;
-  }
-`;
-
-export default styled(Button)`
+export const SlideButton =  styled(Button)`
   width: 22rem;
   height: 4.8rem;
 
@@ -137,7 +137,7 @@ export const ImageContent = styled.div`
   }
 `;
 
-export const DotsStyles = styled.div`
+export const Dots = styled.div`
   position: absolute;
   bottom: 5.2rem;
   left: 50%;

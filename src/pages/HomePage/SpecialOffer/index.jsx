@@ -1,17 +1,12 @@
-import Button, {
-  ContainerStyle,
-  ContentStyle,
-  ImageContent,
-  OfferStyles,
-  TextContent,
-} from "./Style";
+import { ImageContent, OfferButton, TextContent } from "./Style";
 import { OFFER_SECTION } from "@/constants";
+import * as Styled from './Style'
 
-export function OfferSection() {
+export function SpecialOffer() {
   return (
-    <OfferStyles>
-      <ContainerStyle>
-        <ContentStyle>
+    <Styled.Offer>
+      <Styled.Container>
+        <Styled.Content>
           <ImageContent>
             <img src={OFFER_SECTION.imageSrc} alt={OFFER_SECTION.title} />
           </ImageContent>
@@ -19,10 +14,10 @@ export function OfferSection() {
             <p className="subtitle">{OFFER_SECTION.subtitle}</p>
             <h2 className="title">{OFFER_SECTION.title}</h2>
             <p className="description">{OFFER_SECTION.description}</p>
-            <Button>{OFFER_SECTION.buttonText}</Button>
+            <OfferButton>{OFFER_SECTION.buttonText}</OfferButton>
           </TextContent>
-        </ContentStyle>
-      </ContainerStyle>
-    </OfferStyles>
+        </Styled.Content>
+      </Styled.Container>
+    </Styled.Offer>
   );
 }
