@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
-import Gmail from "../../assets/Login/gmail.png";
-import Facebook from "../../assets/Login/facebook.svg";
+import Gmail from "../../assets/login/gmail.svg";
+import Facebook from "../../assets/login/facebook.svg";
 import './Login.css';
-import './styles.css'
 
-export const Login = () => {
+const Login = () => {
     return (
         <div className="login-container">
             <h3 className='AcesseSuaConta'>Acesse sua conta</h3>
-            <form>
-                <p className="NovoCliente">Novo cliente? Então registre-se  </p>
-                <label className="Login">Login</label>
-                <input type="text" placeholder="Insira seu login ou email" />
-                <label className="Senha">Senha</label>
-                <input type="password" placeholder="Insira sua senha" />
-                
+            <form className="FormLogin">
+                <p className="NovoCliente">Novo cliente? Então registre-se <Link className="CliqueAqui" to='registro'>aqui</Link>. </p>
+                <div>
+                    <label className="LoginLabel">Login</label>
+                    <input type="text" placeholder="Insira seu login ou email" />
+                </div>
+                <div>
+                    <label className="Senha">Senha</label>
+                    <input type="password" placeholder="Insira sua senha" />
+                </div>
+                <Link>Esqueci minha senha</Link>
                 <p>Acessar Conta</p>
             </form>
             <div>
@@ -25,3 +28,5 @@ export const Login = () => {
         </div>
     )
 };
+
+export default Login;
