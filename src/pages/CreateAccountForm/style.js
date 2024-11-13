@@ -13,20 +13,24 @@ export const Titulo = styled.h1`
     letter-spacing: 0.099rem;
 `;
 
-export const Bloco1 = styled.div`
+export const Newslatter = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-`;
+    gap: 1rem;
 
-export const Bloco2 = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-`;
-
-export const Check = styled.input`
+    input[type="checkbox"]{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
     
-`;
+    input[type="checkbox"]:checked {
+        accent-color: ${({ theme }) => theme.colors.primary};
+    }
+    
+    p {
+        font-size: 1.4rem;
+        font-weight: ${({ theme }) => theme.font.weight.medium};
+        line-height: 2.2rem;
+        letter-spacing: 0.025rem;
 
-export const Texto = styled.p``;
+    }
+`;
