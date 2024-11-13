@@ -1,0 +1,46 @@
+/* .login-container {
+    width: 58.3rem;
+    height: 56rem;
+    top: 20rem;
+    left: 10rem;
+    border-radius: .4rem;
+    padding: 3rem;
+    gap: 3rem;
+    background-color: white;
+} */
+
+.AcesseSuaConta {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.1rem;
+    color: #1f1f1f;
+};
+
+/* .NovoCliente {
+    font-weight: 523;
+    height: 2.8rem;
+    left: 3rem;
+    gap: 36.5rem;
+    top: 8.6rem;
+    align-items: center;
+};
+
+.CliqueAqui {
+    color: #007bff;
+    text-decoration: underline !important;
+};
+
+.Senha {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: .075rem;
+};
+
+.EsqueciSEnha {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: .025rem;
+    text-decoration-skip-ink: none;
+}; */
