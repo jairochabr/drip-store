@@ -4,6 +4,7 @@ export const Container = styled.section`
     width: 75rem;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 `;
 
 export const Titulo = styled.h1`
