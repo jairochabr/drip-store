@@ -40,7 +40,45 @@ export const Wrapper = styled.div`
     gap: 1rem;
 
     .formaDePagamento {
-        
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        p {
+            color: ${({ theme }) => theme.colors.darkGray2};
+            font-size: 1.2rem;
+            font-weight: ${({ theme }) => theme.font.weight.bold};
+            line-height: 2.4rem;
+            letter-spacing: 0.075rem;
+        }
+
+        .radios {
+            display: flex;
+            gap: 2rem;
+
+            .radio {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            label {
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.2rem;
+                letter-spacing: 0.025rem;
+                color: #474747;
+            }
+
+            input {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
+
+            input[type="radio"]:checked {
+                accent-color: ${({ theme }) => theme.colors.primary};
+            }
+        }
     }
 
     .infoCard {

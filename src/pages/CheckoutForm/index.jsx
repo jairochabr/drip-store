@@ -70,7 +70,17 @@ export default function CheckoutForm() {
                             </BlockForm>
                             <BlockForm value="Informações de Pagamento">
                                 <div className='formaDePagamento'>
-
+                                    <p htmlFor="">Forma de Pagamento</p>
+                                    <div className='radios'>
+                                        <div className='radio'>
+                                            <input name='radio' type="radio" id='radio1'/>
+                                            <label htmlFor="radio1">Cartão de Crédito</label>
+                                        </div>
+                                        <div className='radio'>
+                                            <input name='radio' type="radio" id='radio2'/>
+                                            <label htmlFor="radio2">Boleto Bancário</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <Input
                                     htmlFor="nomeCartao"
