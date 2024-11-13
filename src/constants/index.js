@@ -40,7 +40,77 @@ export const SLIDES = [
   },
 ];
 
-// src/pages/HomePage/Offer/index.jsx
+// src/pages/HomePage/TrendingProducts/index.jsx
+export const TRENDING_PRODUCTS = [
+  {
+    id: 1,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    discount: 30,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 2,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    discount: 30,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 3,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 4,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 5,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 6,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 7,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 8,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+];
+
+// src/pages/HomePage/SpecialOffer/index.jsx
 export const OFFER_SECTION = {
   subtitle: "Oferta especial",
   title: "Air Jordan edição de colecionador",
