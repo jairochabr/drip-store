@@ -8,7 +8,7 @@ export const ProdutoCard = () => {
             id: 1,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             desconto: "30% OFF",
             imagem: sapatoCard
@@ -17,7 +17,7 @@ export const ProdutoCard = () => {
             id: 2,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             desconto: "30% OFF",
             imagem: sapatoCard
@@ -26,7 +26,7 @@ export const ProdutoCard = () => {
             id: 3,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           },
@@ -34,7 +34,7 @@ export const ProdutoCard = () => {
             id: 4,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           },
@@ -42,7 +42,7 @@ export const ProdutoCard = () => {
             id: 5,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           },
@@ -50,7 +50,7 @@ export const ProdutoCard = () => {
             id: 6,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           },
@@ -58,7 +58,7 @@ export const ProdutoCard = () => {
             id: 7,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           },
@@ -66,7 +66,7 @@ export const ProdutoCard = () => {
             id: 8,
             nome: "K-Swiss V8 - Masculino",
             categoria: "Tênis",
-            precoAntigo: 200,
+            precoAntigo: 350,
             precoNovo: 100,
             imagem: sapatoCard
           }

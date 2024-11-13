@@ -27,11 +27,10 @@ export const SectionCarrosel = () => {
         <SwiperSlide>
           <section className="sectionCarrosel">
             <div className="divTextosCarrosel">
-              <p className="carroselOferta">Melhores ofertas personalizadas</p>
-              <h2 className="carroselTitulo">Queima de stoque Nike 🔥</h2>
+              <p className="carroselOferta">Melhores ofertas personalizadas!</p>
+              <h2 className="carroselTitulo">Queima de Estoque Nike 🔥</h2>
               <p className="descricaoCarrosel">
-                Consequat culpa exercitation mollit nisi excepteur do do tempor
-                laboris eiusmod irure consectetur.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id rem, illum quas animi repellat sit sequi, provident suscipit iure perferendis tempore numquam qui nisi! Recusandae.
               </p>
               <div className="divBtnCarrosel">
                 <BtnPrimary texto={"Ver Ofertas"} />
@@ -44,11 +43,10 @@ export const SectionCarrosel = () => {
         <SwiperSlide>
           <section className="sectionCarrosel">
             <div className="divTextosCarrosel">
-              <p className="carroselOferta">Melhores ofertas personalizadas</p>
-              <h2 className="carroselTitulo">Queima de stoque Nike 🔥</h2>
+              <p className="carroselOferta">Melhores ofertas personalizadas!</p>
+              <h2 className="carroselTitulo">Queima de Estoque Nike 🔥</h2>
               <p className="descricaoCarrosel">
-                Consequat culpa exercitation mollit nisi excepteur do do tempor
-                laboris eiusmod irure consectetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam deserunt, impedit quod a libero! Eveniet, alias similique dignissimos est nam ullam temporibus sequi provident?
               </p>
               <div className="divBtnCarrosel">
                 <BtnPrimary texto={"Ver Ofertas"} />
@@ -61,11 +59,10 @@ export const SectionCarrosel = () => {
         <SwiperSlide>
           <section className="sectionCarrosel">
             <div className="divTextosCarrosel">
-              <p className="carroselOferta">Melhores ofertas personalizadas</p>
-              <h2 className="carroselTitulo">Queima de stoque Nike 🔥</h2>
+              <p className="carroselOferta">Melhores ofertas personalizadas!</p>
+              <h2 className="carroselTitulo">Queima de Estoque Nike 🔥</h2>
               <p className="descricaoCarrosel">
-                Consequat culpa exercitation mollit nisi excepteur do do tempor
-                laboris eiusmod irure consectetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi praesentium veniam voluptate deserunt pariatur tenetur nam nihil? Rerum, repellendus voluptate! Id hic nihil optio.
               </p>
               <div className="divBtnCarrosel">
                 <BtnPrimary texto={"Ver Ofertas"} />
@@ -78,11 +75,10 @@ export const SectionCarrosel = () => {
         <SwiperSlide>
           <section className="sectionCarrosel">
             <div className="divTextosCarrosel">
-              <p className="carroselOferta">Melhores ofertas personalizadas</p>
-              <h2 className="carroselTitulo">Queima de stoque Nike 🔥</h2>
+              <p className="carroselOferta">Melhores ofertas personalizadas!</p>
+              <h2 className="carroselTitulo">Queima de Estoque Nike 🔥</h2>
               <p className="descricaoCarrosel">
-                Consequat culpa exercitation mollit nisi excepteur do do tempor
-                laboris eiusmod irure consectetur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur est ipsum, neque ratione excepturi, aut beatae corrupti nam expedita nobis voluptatem eius praesentium. Hic?
               </p>
               <div className="divBtnCarrosel">
                 <BtnPrimary texto={"Ver Ofertas"} />

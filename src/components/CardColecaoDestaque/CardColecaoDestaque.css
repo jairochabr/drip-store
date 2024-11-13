@@ -2,14 +2,14 @@
   width:100% ;
   height: 16rem;
 
-  border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
+  border-radius: 0.5rem 0rem 0rem 0rem;
+  opacity: 0rem;
   position: relative;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.625rem;
   padding: 1.3rem 3rem;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   background-color: #d8e3f2;
   z-index: 1;
@@ -21,15 +21,15 @@
 
 .discount {
   background-color: #ccff90;
-  width: 96px;
-  height: 32px;
+  width: 6rem;
+  height: 2rem;
   color: #333;
   font-family: inter;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  padding: 5px 10px;
-  border-radius: 29px;
-  margin-bottom: 10px;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 1.8125rem;
+  margin-bottom: 0.625rem;
   z-index: 1;
   position: relative;
 }
@@ -37,60 +37,30 @@
 .collection-label {
   padding: 0.5rem 0rem 0.3rem;
   font-family: Inter;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px;
-  letter-spacing: 2px;
+  line-height: 2.25rem;
+  letter-spacing: 0.125rem;
   z-index: 1;
   position: relative;
-  width: 100%; /* Garantindo que o elemento ocupe 100% do espaço disponível */
-  max-width: 200px;
+  width: 100%;
+  max-width: 12.5rem;
   word-wrap: break-word;
 }
 
 .margin {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .collection-image {
   width: 15rem;
   height: 15rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   z-index: -1;
 
   min-width: 8rem;
   position: absolute;
   right: 0;
   bottom: 0;
-
-
-/* Regras para dispositivos móveis @media (max-width: 768px) {
-  .collection-card {
-    padding: 1rem 2rem;
-  }
-
-  .collection-label {
-    font-size: 1.2em;
-  }
-
-  .collection-button {
-    padding: 8px 16px;
-    font-size: 0.9em;
-  }
 }
-
-@media (max-width: 480px) {
-  .collection-card {
-    padding: 0.5rem 1rem;
-  }
-
-  .collection-label {
-    font-size: 1em;
-  }
-
-  .collection-button {
-    padding: 6px 12px;
-    font-size: 0.8em;
-  }
-} */

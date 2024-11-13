@@ -1,12 +1,12 @@
 .btnDefault {
-  width: 158px;
-  height: 48px;
-  border-radius: 8px;
+  width: 9.875rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   border: none;
   background-color: var(--light-gray-3);
   color: var(--primary);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   z-index: 1;
 }
 

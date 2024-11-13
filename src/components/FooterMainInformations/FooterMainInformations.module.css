@@ -8,30 +8,30 @@
 }
 
 .title {
-    font-size: 36.4px;
+    font-size: 2.275rem;
     font-weight: 600;
-    line-height: 44.05px;
+    line-height: 2.7531rem;
 }
 
 .img {
-    max-width: 33px;
-    margin-right: 4px;
+    max-width: 2.0625rem;
+    margin-right: 0.25rem;
 }
 
 .text {
-    margin-top: 25px;
-    font-size: 16px;
+    margin-top: 1.5625rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
 }
 
 .listicons {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
     .container {
         width: 100%;
     }

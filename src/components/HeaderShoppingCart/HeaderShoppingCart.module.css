@@ -28,10 +28,10 @@
   .iconSearch {
     display: none;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     .iconSearch {
       display: flex;
     }

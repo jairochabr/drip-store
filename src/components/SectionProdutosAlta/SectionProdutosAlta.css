@@ -1,12 +1,12 @@
 .produtos-em-alta {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .produtos-em-alta-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .produtos-em-alta h2 {

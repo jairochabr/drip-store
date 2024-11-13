@@ -20,14 +20,14 @@ export const defaultTheme = {
   },
   grid: {
     Breakpoints: {
-      mobile: "375px",
-      tablet: "768px",
-      laptop: "1024px",
-      desktop: "1280px",
+      mobile: "23.4375rem",
+      tablet: "48rem",
+      laptop: "64rem",
+      desktop: "80rem",
     },
   },
   border: {
-    radius: "8px",
+    radius: "0.5rem",
   },
   font: {
     family: "'Inter', sans-serif",

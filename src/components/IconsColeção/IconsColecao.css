@@ -1,28 +1,28 @@
 .collectionIcons {
-  width: 104px;
-  height: 138px;
+  width: 6.5rem;
+  height: 8.625rem;
 
-  border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
+  border-radius: 0.5rem 0rem 0rem 0rem;
+  opacity: 0rem;
   position: relative;
   text-align: center;
 }
 
 .IconsCard {
-  width: 104px;
-  height: 104px;
+  width: 6.5rem;
+  height: 6.5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   border-radius: 50%;
-  opacity: 0px;
+  opacity: 0rem;
   position: relative;
-  border: 1px solid #ddd;
+  border: 0.0625rem solid #ddd;
   padding: 1.3rem 3rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
@@ -32,14 +32,14 @@
 
 .collection-label {
   font-family: Inter;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px;
-  letter-spacing: 2px;
+  line-height: 2.25rem;
+  letter-spacing: 0.125rem;
   z-index: 1;
   position: relative;
-  width: 100%; /* Garantindo que o elemento ocupe 100% do espaço disponível */
-  max-width: 200px;
+  width: 100%; 
+  max-width: 12.5rem;
   word-wrap: break-word;
 }

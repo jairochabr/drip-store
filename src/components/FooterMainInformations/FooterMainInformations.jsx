@@ -11,11 +11,10 @@ export const FooterMainInformations = () => {
     <div className={styles.container}>
       <div className={styles.containerLogo}>
         <img src={imglogo} alt="Logo" className={styles.img} />
-        <h1 className={styles.title}>Digital Store</h1>
+        <h1 className={styles.title}>Digital Store </h1>
       </div>
       <p className={styles.text}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste veniam perspiciatis alias, fugiat quo cumque beatae pariatur nihil accusamus animi!
       </p>
       <div className={styles.listicons}>
         <img src={icon1} alt="facebook" />

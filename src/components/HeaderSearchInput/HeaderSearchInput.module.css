@@ -7,13 +7,13 @@
   
 .searchInput {
   width: 100%;
-  padding: 12px;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   outline: none;
   border: 1px solid var(--light-gray-2);
   border-right-color: transparent;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
   color: var(--dark-gray-3);
 }
   
@@ -33,17 +33,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 12px;
-  border-top: 1px solid var(--light-gray-2);
-  border-right: 1px solid var(--light-gray-2);
-  border-bottom: 1px solid var(--light-gray-2);
+  padding-right: 0.75rem;
+  border-top: 0.0625rem solid var(--light-gray-2);
+  border-right: 0.0625rem solid var(--light-gray-2);
+  border-bottom: 0.0625rem solid var(--light-gray-2);
   border-left: none;
-  height: 41px;
+  height: 2.5625rem;
   border-top-right-radius: 0.5rem; 
   border-bottom-right-radius: 0.5rem; 
 }
   
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
   .container {
     display: none;
   }

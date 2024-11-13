@@ -1,10 +1,10 @@
 .Ofertaescpecial {
     display: flex;
-    gap: 68px;
+    gap: 4.25rem;
     align-items: center;
     justify-content: center;
     background-color: #ffff;
-    padding: 50px;
+    padding: 3.125rem;
 }
 
 .circle{
@@ -26,23 +26,23 @@
 }
 
 .h1OfertaEspacial{
-    margin-bottom: 17px;
-    size: 14px;
+    margin-bottom: 1.0625rem;
+    size: 0.875rem;
     color: var(--primary);
 }
 
 .h2OfertaEspecial{
-    size: 48px;
+    size: 3rem;
     color: var( --dark-gray-2);
 }
 
 .Airjordan {
-width: 589px;
-height: 112px;
-line-height: 28px;
-margin-top: 20px;
+width: 36.8125rem;
+height: 7rem;
+line-height: 1.75rem;
+margin-top: 1.25rem;
 }
 
 .divTextosOferta{
-    margin-left: 68px;
+    margin-left: 4.25rem;
 }

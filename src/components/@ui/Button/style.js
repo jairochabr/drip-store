@@ -24,7 +24,7 @@ const baseStyles = css`
   color: ${({ theme }) => theme.colors.lightGray3};
   font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;

@@ -2,16 +2,16 @@
   .produtos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin: 0px 100px 100px;
+    gap: 1.5rem;
+    margin: 0rem 6.25rem 6.25rem;
   }
   
   .produto {
     position: relative;
     background-color: #f8f9fd;
-    padding: 15px;
+    padding: 0.9375rem;
     text-align: left;
-    box-shadow: 1px var(--light-gray-3);
+    box-shadow: 0.0625rem var(--light-gray-3);
     transition: transform 0.2s ease;
   }
   
@@ -21,13 +21,13 @@
   
   .desconto {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 0.75rem;
+    left: 0.75rem;
     background-color: #e7ff86;
     color: #474747;
     font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 29px;
+    padding: 0.3125rem 0.9375rem;
+    border-radius: 1.8125rem;
     font-size: 0.8rem;
   }
   
@@ -35,7 +35,7 @@
     background-color: #ffff;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 0.625rem;
   }
   
   .categoria {
@@ -47,14 +47,14 @@
   .nome {
     font-size: 1.5rem;
     color: #474747;
-    margin: 5px 0 10px;
+    margin: 0.3125rem 0 0.625rem;
   }
   
   .preco-antigo {
     text-decoration: line-through;
     color: #8f8f8f;
     font-size: 1.5rem;
-    margin-right: 5px;
+    margin-right: 0.3125rem;
     display: inline-block;
   }
   

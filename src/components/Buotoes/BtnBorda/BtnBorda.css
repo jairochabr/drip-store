@@ -1,10 +1,10 @@
 .btnBorda{
-    width: 158px;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid var(--primary);
+    width: 9.875rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--primary);
     background-color: #FCFCFC;
     color: var(--primary);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
