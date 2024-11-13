@@ -2,26 +2,49 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const colorVariants = {
-  primary: (theme) => ({
-    base: theme.colors.primary,
+  primary: {
+    base: ({ theme }) => theme.colors.primary,
     hover: "#991956",
     active: "#900F5D",
-  }),
-  secondary: (theme) => ({
-    base: theme.colors.warning,
+  },
+  secondary: {
+    base: ({ theme }) => theme.colors.warning,
     hover: "#cf8900",
     active: "#de9910",
-  }),
+  },
+  outline: {
+    base: ({ theme }) => theme.colors.lightGray3,
+    hover: "#B5B6F2",
+    active: "#B5B6F2",
+  },
+  danger: {
+    base: ({ theme }) => theme.colors.error,
+    hover: "#d0153e",
+    active: "#DE4266",
+  },
+  success: {
+    base: ({ theme }) => theme.colors.success,
+    hover: "#0ba038",
+    active: "#42CA76",
+  },
 };
 
 const sizes = {
-  small: { padding: "0.6rem 1.2rem", fontSize: "1.4rem" },
-  medium: { padding: "0.8rem 1.6rem", fontSize: "1.6rem" },
-  large: { padding: "1rem 2rem", fontSize: "1.8rem" },
+  small: {
+    padding: "1.6rem 1.6rem",
+    fontSize: "1.4rem",
+  },
+  medium: {
+    padding: "1.6rem 3.6rem",
+    fontSize: "1.6rem",
+  },
+  large: {
+    padding: "1.6rem 6rem",
+    fontSize: "1.8rem",
+  },
 };
 
 const baseStyles = css`
-  color: ${({ theme }) => theme.colors.lightGray3};
   font-weight: 700;
   border: none;
   border-radius: 8px;
@@ -35,27 +58,30 @@ const baseStyles = css`
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    border: 1px solid ${({ variant }) =>
+      variant === "outline" ? ({ theme }) => theme.colors.primary : ""};
   }
 
-  ${({ variant, theme }) => {
-    const colors = colorVariants[variant](theme);
-    return css`
-      background-color: ${colors.base};
-      &:hover:not(:disabled) {
-        background-color: ${colors.hover};
-      }
-      &:active:not(:disabled) {
-        background-color: ${colors.active};
-        opacity: 0.8;
-      }
-    `;
-  }}
-
-  ${({ size }) => {
+  ${({ variant, size }) => {
+    const { base, hover, active } = colorVariants[variant];
     const { padding, fontSize } = sizes[size];
     return css`
+      color: ${variant === "outline"
+        ? ({ theme }) => theme.colors.primary
+        : ({ theme }) => theme.colors.lightGray3};
+      background-color: ${base};
       padding: ${padding};
       font-size: ${fontSize};
+      &:hover:not(:disabled) {
+        color: ${variant === "outline"
+          ? ({ theme }) => theme.colors.lightGray3
+          : ""};
+        background-color: ${hover};
+      }
+      &:active:not(:disabled) {
+        background-color: ${active};
+        opacity: 0.8;
+      }
     `;
   }}
 `;
@@ -64,7 +90,7 @@ export const ButtonStyle = styled.button`
   ${baseStyles}
 `;
 
-export const LinkStyle = styled(Link)`
+export const RouterLink = styled(Link)`
   ${baseStyles}
   text-decoration: none;
   display: inline-block;
