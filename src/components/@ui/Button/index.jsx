@@ -1,37 +1,17 @@
-import { ButtonStyle, LinkStyle } from "./style";
+import { ButtonStyle, RouterLink } from "./style";
 
-export function Button({
-  children,
-  variant = "primary",
-  size = "medium",
-  disabled = false,
-  onClick = () => {},
-  type = "button",
-  to,
-  ...props
-}) {
+export function Button({ children, variant = "primary", size = "medium", to, ...props }) {
+  // Se houver uma propriedade 'to', o botão se transformará em um link
   if (to) {
     return (
-      <LinkStyle
-        to={to}
-        variant={variant}
-        size={size}
-        onClick={onClick}
-        {...props}
-      >
+      <RouterLink to={to} variant={variant} size={size} {...props}>
         {children}
-      </LinkStyle>
+      </RouterLink>
     );
   }
+  // Caso contrário, permanece como um botão normal
   return (
-    <ButtonStyle
-      type={type}
-      disabled={disabled}
-      variant={variant}
-      size={size}
-      onClick={onClick}
-      {...props}
-    >
+    <ButtonStyle variant={variant} size={size} {...props}>
       {children}
     </ButtonStyle>
   );
