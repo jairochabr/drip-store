@@ -24,6 +24,7 @@ export const Titulo = styled.h1`
 export const AllWrapper = styled.div`
     display: flex;
     gap: 2rem;
+    margin-bottom: 17.6rem;
     
 
     .resumo {
