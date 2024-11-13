@@ -9,6 +9,7 @@ import { OrderPage } from "./pages/OrderPage";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import CreateAccountForm from "./pages/CreateAccountForm";
 
 export function Router() {
   return (
@@ -27,6 +28,9 @@ export function Router() {
         <Route path="/cadastro" element={<RegisterPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
+      {/* Rota de teste */}
+      <Route path="/forms" element={<CreateAccountForm />} />
+
     </Routes>
   );
 }

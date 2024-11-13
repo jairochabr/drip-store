@@ -6,6 +6,7 @@ export default function BlockForm(props) {
             <S.Bloco>
                 <p>{props.value}</p>
                 <hr/>
+                {props.children}
             </S.Bloco>
         </>
     )

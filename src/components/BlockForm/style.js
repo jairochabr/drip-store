@@ -5,6 +5,7 @@ export const Bloco = styled.div`
     flex-direction: column;
     gap: 2rem;
     padding: 3rem;
+    background-color: ${({ theme }) => theme.colors.white};
 
     p {
         font-size: 1.4rem;
