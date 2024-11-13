@@ -1,6 +1,7 @@
 import BlockForm from '@/components/BlockForm';
 import * as S from './style';
 import Input from '@/components/@ui/Input';
+import { Button } from '@/components/@ui/Button';
 
 export default function CheckoutForm() {
     return (
@@ -118,7 +119,14 @@ export default function CheckoutForm() {
                                 </div>
                             </BlockForm>
                             <BlockForm value="Finalizar Compra">
-
+                                <div className='Total'>
+                                    <p>Total</p>
+                                    <div className='valores'>
+                                        <span className='valor'>R$ 219,00</span>
+                                        <span className='parcelamento'>ou 10x de R$ 21,00 sem juros</span>
+                                    </div>
+                                </div>
+                                <Button variant='secondary' size='small'>Realizar Pagamento</Button>
                             </BlockForm>
                         </S.Wrapper>
                         <span className='resumo'></span>

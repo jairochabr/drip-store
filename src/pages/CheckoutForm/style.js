@@ -92,4 +92,44 @@ export const Wrapper = styled.div`
         grid-template-columns: 60% auto;
         gap: 2rem;
     }
+
+    Button {
+        height: 5rem;
+    }
+
+    .Total {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 1.8rem;
+            font-weight: ${({ theme }) => theme.font.weight.bold};
+            line-height: 3.4rem;
+            letter-spacing: 0.075rem;
+
+        }
+
+        .valores {
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+
+            .valor {
+                font-size: 1.8rem;
+                font-weight: ${({ theme }) => theme.font.weight.bold};
+                line-height: 3.4rem;
+                letter-spacing: 0.075rem;
+                color: #EE4266;  
+            }
+
+            .parcelamento {
+                font-size: 1.2rem;
+                font-weight: ${({ theme }) => theme.font.weight.medium};
+                line-height: 2.2rem;
+                letter-spacing: 0.1rem;
+                color: #8F8F8F;
+            }
+
+        }
+    }
 `;
