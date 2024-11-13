@@ -29,7 +29,7 @@ export function Router() {
       </Route>
       <Route path="*" element={<NotFoundPage />} />
       {/* Rota de teste */}
-      <Route path="/form" element={<CreateAccountForm />} />
+      {/* <Route path="/form" element={<CreateAccountForm />} /> */}
 
     </Routes>
   );
