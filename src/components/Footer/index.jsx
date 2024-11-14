@@ -1,6 +1,4 @@
-import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-import Logo from "../../assets/logo-footer.svg";
 import {
   FooterStyle,
   FooterContent,
@@ -11,6 +9,7 @@ import {
   Divider,
   Copyright,
 } from "./style";
+import { DripStore } from "../icons";
 
 export function Footer() {
   return (
@@ -18,7 +17,7 @@ export function Footer() {
       <FooterContent>
         <div>
           <FooterLogo>
-            <img src={Logo} alt="Logo Digital Store" />
+            <DripStore color="white" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore.

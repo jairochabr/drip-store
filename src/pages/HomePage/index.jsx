@@ -1,6 +1,6 @@
 import { Loading } from "@/components/Loading";
 import { Carousel } from "./Carousel";
-import { FeaturedSection } from "./Featured";
+import { TrendingProducts } from "./TrendingProducts";
 import { SpecialOffer } from "./SpecialOffer";
 
 export function HomePage() {
@@ -8,7 +8,7 @@ export function HomePage() {
     <>
       <Loading />
       <Carousel />
-      <FeaturedSection />
+      <TrendingProducts />
       <SpecialOffer />
     </>
   );
