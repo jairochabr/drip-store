@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Gmail from "../../assets/login/gmail.svg";
-import Facebook from "../../assets/login/facebook.svg";
+import Facebook from "../../assets/login/Facebook.svg";
 import './Login.css';
+import "../@ui/Button/style/primary";
 
-const Login = () => {
+function Login() {
     return (
         <div className="login-container">
             <h3 className='AcesseSuaConta'>Acesse sua conta</h3>
@@ -18,15 +19,25 @@ const Login = () => {
                     <input type="password" placeholder="Insira sua senha" />
                 </div>
                 <Link>Esqueci minha senha</Link>
-                <p>Acessar Conta</p>
             </form>
             <div>
-                <p>Ou faça login com </p>
-                <img src={Facebook} />
-                <img src={Gmail} />
+                <div>
+                    <div class="Button-primary">
+                        <button>Ou faça login com</button>
+                        <img src={Gmail} alt="Gmail" />
+                        <img scr={Facebook} alt="Facebook" />
+
+                    </div>
+
+
+
+
+                </div>
+
+
             </div>
         </div>
-    )
-};
+    );
+}
 
 export default Login;
