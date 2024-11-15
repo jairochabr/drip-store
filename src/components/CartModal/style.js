@@ -13,7 +13,8 @@ export const ModalContainer = styled.div`
 export const CartContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  height: 100%;
+
   .title {
     color: ${({ theme }) => theme.colors.darkGray2};
     font-size: 1.6rem;
@@ -22,10 +23,28 @@ export const CartContent = styled.div`
   }
 `;
 
+export const ItemsContainer = styled.div`
+    flex: 1;
+    overflow-y: auto;
+    padding-block: 2rem 0;
+    
+    /* Esconde a scrollbar no Firefox */
+    scrollbar-width: none;
+    
+    /* Esconde a scrollbar no Chrome, Safari e Edge */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Garante que o conteúdo não seja cortado */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+`
+
 export const CartInfos = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  margin-bottom: 2rem;
 `;
 
 export const CartImage = styled.div`
@@ -76,7 +95,7 @@ export const CartPrice = styled.div`
   font-size: 1.6rem;
   color: ${({ theme }) => theme.colors.darkGray};
   justify-content: space-between;
-  padding-top: 2rem;
+  padding-block: 2rem;
   border-top: 1px solid ${({ theme }) => theme.colors.lightGray2};
   .totalPrice {
     color: ${({ theme }) => theme.colors.error};
@@ -100,5 +119,5 @@ export const ButtonEmpty = styled.button`
 
 export const CartButton = styled(Button)`
   font-size: 1.4rem;
-  padding: 1.6rem;
+  padding: 1.5rem 1.6rem;
 `;
