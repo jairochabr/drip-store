@@ -1,5 +1,15 @@
+import { Loading } from "@/components/Loading";
+import Filter from "./Filter";
+import { PageContainer, ProductContent } from "./style";
+
 export function ProductPage() {
   return (
-    <h1>ProductPage</h1>
-  )
+    <>
+      <Loading />
+      <PageContainer>
+        <Filter />
+        <ProductContent></ProductContent>
+      </PageContainer>
+    </>
+  );
 }
