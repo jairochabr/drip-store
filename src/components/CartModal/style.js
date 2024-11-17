@@ -8,6 +8,10 @@ export const ModalContainer = styled.div`
   background: ${({ theme }) => theme.colors.white};
   padding: 3rem;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 4.4rem;
+  right: 2.8rem;
+  z-index: 5;
 `;
 
 export const CartContent = styled.div`
