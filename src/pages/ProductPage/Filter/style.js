@@ -1,12 +1,47 @@
 import styled from "styled-components";
 
+// Barra superior que alinha os elementos "Resultados" e "Ordenar por"
+export const ResultsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem; /* Adiciona espaço acima */
+`;
+
+export const ResultsText = styled.span`
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: ${({ theme }) => theme.colors.darkGray1};
+  cursor: pointer;
+  position: absolute;
+  top: 10rem; /* Alinha no topo */
+  span {
+    font-weight: bold;
+  }
+`;
+
+export const OrderSelect = styled.select`
+  width: 25rem;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid ${({ theme }) => theme.colors.darkGray2};
+  border-radius: 0.4rem;
+  background-color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
+  position: absolute;
+  top: 8rem; /* Alinha no topo */
+  right: 45rem; /* Alinha à direita */
+`;
+
+// Container principal do filtro
 export const FilterContainer = styled.div`
   width: 30rem;
   padding: 2rem;
-  border: 0.1rem solid #${({ theme }) => theme.colors.darkGray3};
   border-radius: 0.8rem;
   background-color: ${({ theme }) => theme.colors.white};
   font-family: Arial, sans-serif;
+  margin-left: 6rem;
 `;
 
 export const FilterTitle = styled.h3`

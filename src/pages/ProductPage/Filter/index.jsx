@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   FilterContainer,
   FilterTitle,
@@ -7,6 +7,9 @@ import {
   FilterCheckbox,
   FilterRadio,
   FilterSelect,
+  ResultsContainer,
+  ResultsText,
+  OrderSelect,
 } from "./style";
 
 const Filter = () => {
@@ -50,77 +53,84 @@ const Filter = () => {
   };
 
   return (
-    <FilterContainer>
-      <FilterTitle>Filtrar por</FilterTitle>
-
-      <FilterSection>
-        <h4>Marca</h4>
-        {Object.keys(filters.marca).map((key) => (
-          <FilterOption key={key}>
-            <FilterCheckbox
-              type="checkbox"
-              checked={filters.marca[key]}
-              onChange={() => handleCheckboxChange("marca", key)}
-            />
-            <span>{key}</span>
-          </FilterOption>
-        ))}
-      </FilterSection>
-
-      <FilterSection>
-        <h4>Categoria</h4>
-        {Object.keys(filters.categoria).map((key) => (
-          <FilterOption key={key}>
-            <FilterCheckbox
-              type="checkbox"
-              checked={filters.categoria[key]}
-              onChange={() => handleCheckboxChange("categoria", key)}
-            />
-            <span>{key}</span>
-          </FilterOption>
-        ))}
-      </FilterSection>
-
-      <FilterSection>
-        <h4>Gênero</h4>
-        {Object.keys(filters.genero).map((key) => (
-          <FilterOption key={key}>
-            <FilterCheckbox
-              type="checkbox"
-              checked={filters.genero[key]}
-              onChange={() => handleCheckboxChange("genero", key)}
-            />
-            <span>{key}</span>
-          </FilterOption>
-        ))}
-      </FilterSection>
-
-      <FilterSection>
-        <h4>Estado</h4>
-        {["Novo", "Usado"].map((key) => (
-          <FilterOption key={key}>
-            <FilterRadio
-              type="radio"
-              name="estado"
-              checked={filters.estado === key}
-              onChange={() => handleRadioChange("estado", key)}
-            />
-            <span>{key}</span>
-          </FilterOption>
-        ))}
-      </FilterSection>
-
-      <FilterSection>
-        <h4>Ordenar por</h4>
-        <FilterSelect>
+    <>
+      {/* Barra Superior */}
+      <ResultsContainer>
+        <ResultsText>
+          <span>Resultados para "Tênis"</span> - 389 produtos
+        </ResultsText>
+        <OrderSelect>
+          <option disabled>Ordenar por:</option>
           <option>Mais relevantes</option>
           <option>Menor preço</option>
           <option>Maior preço</option>
           <option>Mais vendidos</option>
           <option>Melhor avaliação</option>
-        </FilterSelect>
-      </FilterSection>
-    </FilterContainer>
+        </OrderSelect>
+      </ResultsContainer>
+
+      {/* Filtro */}
+      <FilterContainer>
+        <FilterTitle>Filtrar por</FilterTitle>
+
+        <FilterSection>
+          <h4>Marca</h4>
+          {Object.keys(filters.marca).map((key) => (
+            <FilterOption key={key}>
+              <FilterCheckbox
+                type="checkbox"
+                checked={filters.marca[key]}
+                onChange={() => handleCheckboxChange("marca", key)}
+              />
+              <span>{key}</span>
+            </FilterOption>
+          ))}
+        </FilterSection>
+
+        <FilterSection>
+          <h4>Categoria</h4>
+          {Object.keys(filters.categoria).map((key) => (
+            <FilterOption key={key}>
+              <FilterCheckbox
+                type="checkbox"
+                checked={filters.categoria[key]}
+                onChange={() => handleCheckboxChange("categoria", key)}
+              />
+              <span>{key}</span>
+            </FilterOption>
+          ))}
+        </FilterSection>
+
+        <FilterSection>
+          <h4>Gênero</h4>
+          {Object.keys(filters.genero).map((key) => (
+            <FilterOption key={key}>
+              <FilterCheckbox
+                type="checkbox"
+                checked={filters.genero[key]}
+                onChange={() => handleCheckboxChange("genero", key)}
+              />
+              <span>{key}</span>
+            </FilterOption>
+          ))}
+        </FilterSection>
+
+        <FilterSection>
+          <h4>Estado</h4>
+          {["Novo", "Usado"].map((key) => (
+            <FilterOption key={key}>
+              <FilterRadio
+                type="radio"
+                name="estado"
+                checked={filters.estado === key}
+                onChange={() => handleRadioChange("estado", key)}
+              />
+              <span>{key}</span>
+            </FilterOption>
+          ))}
+        </FilterSection>
+      </FilterContainer>
+    </>
   );
 };
 
