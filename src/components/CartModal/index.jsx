@@ -65,7 +65,7 @@ export function CartModal() {
       <CartContent>
         <h2 className="title">Meu Carrinho</h2>
         <ItemsContainer>
-          {cartItems.map((item) => (
+          {cartItems.map(item => (
             <CartInfos key={item.id}>
               <CartImage>
                 <img src={item.image} alt={item.name} />

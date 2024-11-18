@@ -7,7 +7,7 @@ export function DefaultLayout() {
   return (
     <>
       <Header />
-      <CartModal />
+      {/* <CartModal /> */}
       <Outlet />
       <Footer />
     </>
