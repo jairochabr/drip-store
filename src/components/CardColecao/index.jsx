@@ -1,21 +1,21 @@
+import { CollectionCard, Discount } from "./Style";
 import { Button } from "@/components/@ui/Button";
-import "./CardColecaoDestaque.css";
 
 function CardColecaoDestaque({ label, img, discount }) {
   return (
-    <div className="collection-card">
-      <span className="discount">{discount}</span>
+    <CollectionCard>
+      <Discount>{discount}</Discount>
       <img
         src={img}
         alt={label}
         className="collection-image"
         onError={(e) => {
           e.target.src = "";
-        }} // Imagem padrão
+        }}
       />
       <p className="collection-label">{label}</p>
-    <Button variant="outline">Enviar</Button>
-    </div>
+      <Button variant="outline">Enviar</Button>
+    </CollectionCard>
   );
 }
 
