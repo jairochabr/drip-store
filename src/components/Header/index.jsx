@@ -1,15 +1,14 @@
-import { HeaderStyle, HeaderWrapper, GridHeader, SearchContainer, SearchInput, SearchButton, Navbar, NavList, NavItem, StyledLink, BtnHome, MiniCartIcon  } from "./style";
+import { HeaderStyle, HeaderWrapper, GridHeader, SearchContainer, SearchInput, SearchButton, Navbar, NavList, StyledLink, BtnHome, MiniCartIcon  } from "./style";
 import { LuSearch } from "react-icons/lu"; 
-import logo from '../../assets/logo-header.svg';
+import { DripStore } from "../icons";
 import miniCart from '../../assets/mini-cart.svg';
+import { NavLink } from "react-router-dom";
 
 export function Header() {
   return (
     <HeaderStyle>
       <HeaderWrapper>
-                <GridHeader>
-                    <img src={logo} alt="Logo Digital Store" />
-                </GridHeader>
+                <DripStore />
                 <GridHeader>
                     <SearchContainer>
                         <SearchInput 
@@ -31,10 +30,30 @@ export function Header() {
             </HeaderWrapper>
             <Navbar>
                 <NavList>
-                    <NavItem>Home</NavItem>
-                    <NavItem>Produtos</NavItem>
-                    <NavItem>Categorias</NavItem>
-                    <NavItem>Meus Pedidos</NavItem>
+                    <NavLink 
+                    to="/" 
+                    
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink 
+                    to="/produtos" 
+                    
+                    >
+                        Produtos
+                    </NavLink>
+                    <NavLink 
+                    to="/categorias" 
+                    
+                    >
+                        Categorias
+                    </NavLink>
+                    <NavLink 
+                    to="/pedidos" 
+                    
+                    >
+                        Meus Pedidos
+                    </NavLink>
                 </NavList>
             </Navbar>
     </HeaderStyle>

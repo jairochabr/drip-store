@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const TrendingSection = styled.section`
+  padding-top: 12rem;
   background: #f9f8fe;
 `;
 

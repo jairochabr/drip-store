@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { colors } from "../../styles/theme";
 
 export const HeaderStyle = styled.header`
    width: 100%;
 `;
 
 export const HeaderWrapper = styled.div`
-    background-color: ${colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,16 +27,16 @@ export const SearchInput = styled.input`
     padding: 10px;
     border-radius: 4px 0 0 4px; 
     border: none;
-    background-color: ${colors.lightGray2};
-    color: ${colors.lightGray3};
+    background-color: ${({ theme }) => theme.colors.lightGray3};
+    color:  ${({ theme }) => theme.colors.lightGray2};
 `;
 
 export const SearchButton = styled.button`
     height: 40px; 
     border-radius: 0 4px 4px 0; 
     border: none;
-    background-color: ${colors.lightGray3}; 
-    color: ${colors.lightGray};
+    background-color: ${({ theme }) => theme.colors.lightGray3};
+    color: ${({ theme }) => theme.colors.lightGray2};
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -45,12 +44,12 @@ export const SearchButton = styled.button`
     cursor: pointer; 
 
     &:hover {
-        background-color: ${colors.secundary}; 
+        background-color: ${({ theme }) => theme.colors.secundary};
     }
 `;
 
 export const Navbar = styled.nav`
-    background-color: var(--white);
+    background-color:${({ theme }) => theme.colors.secundary};
     display: flex;
     justify-content: start;
     height: 55px;
@@ -60,24 +59,24 @@ export const Navbar = styled.nav`
 export const NavList = styled.ul`
     display: flex;
     gap: 20px;
-    color: var(--dark-gray);
+    color:${({ theme }) => theme.colors.secundary};
     list-style: none;
-`;
 
-export const NavItem = styled.li`
-    font-weight: 400;
-    cursor: pointer;
+    a{
+        font-weight: 400;
+        cursor: pointer;
 
-    &:hover {
-        color: var(--primary);
+        &.active {
+        color:${({ theme }) => theme.colors.primary};
         font-weight: 700;
-        border-bottom: 3px solid var(--primary);
+        border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
+        }     
     }
 `;
 
 export const StyledLink = styled.a`
     padding: 10px 16px;
-    color: var(--dark-gray);
+    color: ${({ theme }) => theme.colors.darkGray};
     font-weight: 500;
     text-decoration: underline;
 `;
@@ -85,10 +84,11 @@ export const StyledLink = styled.a`
 export const BtnHome = styled.button`
     padding: 8px 30px;
     margin: 0 20px;
-    background-color: var(--primary);
-    color: var(--white);
+    background-color:${({ theme }) => theme.colors.primary};
+    color:${({ theme }) => theme.colors.white};
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 `;
 
 export const MiniCartIcon = styled.img`
