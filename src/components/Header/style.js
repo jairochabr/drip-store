@@ -10,39 +10,44 @@ export const HeaderWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px 15px 50px;
+    padding-block: 1.5rem;
 `;
 
 export const GridHeader = styled.div`
     display: flex;
     align-items: center;
+    position: relative;
 `;
 
 export const SearchContainer = styled.div`
     display: flex;
+    align-items: center;
 `;
 
 export const SearchInput = styled.input`
-    width: 600px; 
-    height: 40px; 
-    padding: 10px;
-    border-radius: 4px 0 0 4px; 
+    width: 59.9rem; 
+    height: 6rem; 
+    padding: 1rem;
+    border-radius: 0.4rem 0 0 0.4rem; 
     border: none;
+    border-radius: 0.8rem;
     background-color: ${({ theme }) => theme.colors.lightGray3};
     color:  ${({ theme }) => theme.colors.lightGray2};
 `;
 
 export const SearchButton = styled.button`
-    height: 40px; 
-    border-radius: 0 4px 4px 0; 
+    height: 4rem; 
+    border-radius: 0 0.4rem 0.4rem 0; 
     border: none;
     background-color: ${({ theme }) => theme.colors.lightGray3};
     color: ${({ theme }) => theme.colors.lightGray2};
     display: flex;
     align-items: center;
     justify-content: center; 
-    padding: 0 10px; 
-    cursor: pointer; 
+    padding: 0 1rem; 
+    cursor: pointer;
+    position: absolute;
+    right: 0;
 
     &:hover {
         background-color: ${({ theme }) => theme.colors.secundary};
@@ -53,13 +58,13 @@ export const Navbar = styled.nav`
     background-color:${({ theme }) => theme.colors.secundary};
     display: flex;
     justify-content: start;
-    height: 55px;
-    padding: 15px 50px;
+    height: 5.5rem;
+    padding-block: 1.5rem;
 `;
 
 export const NavList = styled.ul`
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     color:${({ theme }) => theme.colors.secundary};
     list-style: none;
 
@@ -70,25 +75,25 @@ export const NavList = styled.ul`
         &.active {
         color:${({ theme }) => theme.colors.primary};
         font-weight: 700;
-        border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
+        border-bottom: 0.3rem solid ${({ theme }) => theme.colors.primary};
         }     
     }
 `;
 
 export const StyledLink = styled.a`
-    padding: 10px 16px;
+    padding: 1rem 1.6rem;
     color: ${({ theme }) => theme.colors.darkGray};
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: underline;
 `;
 
 export const BtnHome = styled(Button)`
-    padding: 8px 30px;
-    margin: 0 20px;
+    padding: 0.8rem 3rem;
+    margin: 0 2rem;
 `;
 
 export const MiniCartIcon = styled.img`
-    height: 20px; 
+    height: 2rem; 
     width: auto; 
     cursor: pointer;
 `;
