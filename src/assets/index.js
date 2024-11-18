@@ -1,4 +1,7 @@
-import Ornament from './Ornament.svg'
+import Ornament from './other/Ornament.svg'
+import Camisa from './destaque/camisa.png'
+import Tenis from './destaque/tenis.png'
+import Headphones from './destaque/headphones.png'
 
 // Tennis
 import SneakersImg from './tennis/sneakers.png'
@@ -13,5 +16,8 @@ export const TENNIS = {
 
 // other images
 export {
-  Ornament
+  Ornament,
+  Headphones,
+  Camisa,
+  Tenis
 }
