@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 export function Header() {
   return (
     <HeaderStyle>
+        <div className="container">
+
       <HeaderWrapper>
                 <DripStore />
                 <GridHeader>
@@ -16,7 +18,7 @@ export function Header() {
                             placeholder='Pesquisar Produto...'
                         />
                         <SearchButton>
-                            <LuSearch size={20} />
+                            <LuSearch size={24} />
                         </SearchButton>
                     </SearchContainer>
                 </GridHeader>
@@ -54,6 +56,7 @@ export function Header() {
                     </NavLink>
                 </NavList>
             </Navbar>
+        </div>
     </HeaderStyle>
   );
 }
