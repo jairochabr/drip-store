@@ -1,5 +1,11 @@
+import { CartItems } from "@/components/Cart"
+
 export function ProductPage() {
   return (
-    <h1>ProductPage</h1>
+  <div>
+    
+      <h1>ProductPage</h1>
+      <CartItems></CartItems>
+  </div>
   )
 }
