@@ -1,10 +1,9 @@
 import { TENNIS } from "@/assets";
 import { ProductCard } from "@/components/@ui/ProductCard";
-import { useState } from "react";
 import { ProductListContainer } from "./style";
 
-export function ProductList() {
-  const [products, setProducts] = useState([
+export function ProductList({ onSelectProduct }) {
+  const products = [
     {
       id: 1,
       name: "K-Swiss V8 - Masculino",
@@ -79,12 +78,15 @@ export function ProductList() {
       currentPrice: 100,
       image: TENNIS.kSwiss,
     },
-  ]);
+    // Adicione mais produtos conforme necessário
+  ];
 
   return (
     <ProductListContainer>
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <div key={product.id} onClick={() => onSelectProduct(product)}>
+          <ProductCard product={product} />
+        </div>
       ))}
     </ProductListContainer>
   );
