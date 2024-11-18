@@ -1,5 +1,4 @@
 import React from 'react';
-import Tennis from '../../assets/tennis/sneakers.png';
 import {
   ResumeContainer,
   ProductImage,
@@ -7,40 +6,54 @@ import {
   Frete,
   Desconto,
   Total,
+  CustomButton
 } from './style';
+// import { Button } from '../@ui/Button';
 
-export function Resume() {
+export function Resume({
+  title = 'RESUMO',
+  productImage,
+  productName,
+  subtotal,
+  frete,
+  desconto,
+  total,
+  parcelas,
+  buttonLabel,
+}) {
   return (
     <ResumeContainer>
-      <h1>RESUMO</h1>
+      <h1>{title}</h1>
       <ProductImage>
-        <img src={Tennis} alt="Produto" />
-        <h5>Tênis Nike Revolution 6 Next Nature Masculino</h5>
+        <div className='image'>
+          <img src={productImage} alt="Produto" />
+        </div>
+        <h5>{productName}</h5>
       </ProductImage>
       <Subtotal>
         <span>Subtotal: </span>
-        <span>R$ 219,00</span>
+        <span>{subtotal}</span>
       </Subtotal>
       <Frete>
         <span>Frete: </span>
-        <span>R$ 0,00</span>
+        <span>{frete}</span>
       </Frete>
       <Desconto>
         <span>Desconto: </span>
-        <span>R$ 30,00</span>
+        <span>{desconto}</span>
       </Desconto>
       <Total>
-        <h2>Total</h2>
         <div className="price">
-          <h2>R$ 219,00</h2>
-          <span>ou 10x de R$ 21,00 sem juros</span>
+          <h2>Total</h2>
+          <h2>{total}</h2>
+        </div>
+        <div className="detail">
+          <span>{parcelas}</span>
         </div>
       </Total>
-      {/* 
-      <RouterLink to="/" className='btn-resume'>
-        <span>Realizar Pagamento</span>
-      </RouterLink> 
-      */}
+      <CustomButton variant='secondary' size='large'>
+        {buttonLabel}
+      </CustomButton>
     </ResumeContainer>
-  );
+  );
 }

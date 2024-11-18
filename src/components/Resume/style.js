@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../@ui/Button";
 
 export const ResumeContainer = styled.div`
   width: 46.8rem;
@@ -31,10 +32,23 @@ export const ProductImage = styled.div`
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.lightGray2};
   align-items: center;
 
-  img {
+
+  .image {
     width: 7.118rem;
     height: 5.8rem;
     border-radius: 0.267rem;
+    background-color: #E2E3FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 5.063rem;
+      height: 2.519rem;
+      border-radius: 0.267rem;
+      margin: 0 auto;
+    }
   }
 
   h5 {
@@ -52,34 +66,108 @@ export const ProductImage = styled.div`
 export const Subtotal = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
-  font-size: 14px;
+  width: 40.8rem;
+  height: 2.2rem;
+  font-family: ${({ theme }) => theme.font.family};;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  letter-spacing: 0.025rem;
+  color: ${({theme}) => theme.colors.darkGray};
+
+  
+  span:first-child {
+  color: ${({theme}) => theme.colors.lightGray}
+  }
 `;
 
-export const Frete = styled(Subtotal)``;
-
-export const Desconto = styled(Subtotal)``;
-
-export const Total = styled.div`
+export const Frete = styled(Subtotal)`
   display: flex;
   justify-content: space-between;
-  background-color: beige;
-  border-radius: 4px;
-  border: 1px solid white;
-  padding: 15px;
-  margin: 15px 0;
+  width: 40.8rem;
+  height: 2.2rem;
+  font-family: ${({ theme }) => theme.font.family};;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  letter-spacing: 0.025rem;
+  color: ${({theme}) => theme.colors.darkGray};
 
-  h2 {
-    font-size: 18px;
+  span:first-child {
+  color: ${({theme}) => theme.colors.lightGray}
   }
+`;
 
-  .price {
+export const Desconto = styled(Subtotal)`
+display: flex;
+  justify-content: space-between;
+  width: 40.8rem;
+  height: 2.2rem;
+  font-family: ${({ theme }) => theme.font.family};;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  letter-spacing: 0.025rem;
+  color: ${({theme}) => theme.colors.darkGray};
+
+  span:first-child {
+  color: ${({theme}) => theme.colors.lightGray}
+  }
+`;
+
+export const Total = styled.div`
+  width: 40.8rem;
+  height: 10rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #F6AA1C26;
+  padding: 2rem;
+  margin: 15px 0;
+  background-color: #F6AA1C0D;
+  align-items: center;
+
+
+  .price{
     display: flex;
-    flex-direction: column;
-    text-align: right;
+    justify-content: space-between;
+    align-items: center;
 
-    span {
-      font-size: 10px;
+    .price h2:first-child {
+      width: 6.2rem;
+      height: 3.8rem;
+      font-family: ${({ theme }) => theme.font.family};;
+      font-size: 2.4rem;
+      line-height: 2rem;
+      font-weight: ${({ theme }) => theme.font.weight.bold};
+      letter-spacing: 0.075rem;
+      color: ${({theme}) => theme.colors.darkGray};
+    }
+
+    .price h2:last-child {
+      width: 12.5rem;
+      height: 3.8rem;
+      font-family: ${({ theme }) => theme.font.family};;
+      font-size: 2.4rem;
+      line-height: 2rem;
+      font-weight: ${({ theme }) => theme.font.weight.bold};
+      letter-spacing: 0.075rem;
+      color: ${({theme}) => theme.colors.darkGray};
     }
   }
+
+  .detail {
+    width: 36.8rem;
+    height: 2.2rem;
+    font-family: ${({ theme }) => theme.font.family};;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: ${({ theme }) => theme.font.weight.medium};
+    letter-spacing: 0.1rem;
+    color: ${({theme}) => theme.colors.lightGray};
+    text-align: right;
+  }
+`;
+
+export const CustomButton = styled(Button)`
+ width: 40.8rem;
+ height: 5rem;
 `;
