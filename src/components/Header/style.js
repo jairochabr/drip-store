@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../@ui/Button";
 
 export const HeaderStyle = styled.header`
    width: 100%;
@@ -81,17 +82,13 @@ export const StyledLink = styled.a`
     text-decoration: underline;
 `;
 
-export const BtnHome = styled.button`
+export const BtnHome = styled(Button)`
     padding: 8px 30px;
     margin: 0 20px;
-    background-color:${({ theme }) => theme.colors.primary};
-    color:${({ theme }) => theme.colors.white};
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
 `;
 
 export const MiniCartIcon = styled.img`
     height: 20px; 
     width: auto; 
+    cursor: pointer;
 `;

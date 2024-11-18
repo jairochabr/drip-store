@@ -21,11 +21,9 @@ export function Header() {
                     </SearchContainer>
                 </GridHeader>
                 <GridHeader>
-                    <StyledLink href="">Cadastre-se</StyledLink>
-                    <BtnHome>Entrar</BtnHome>
-                    <a href="/carrinho" aria-label="Carrinho">
+                    <StyledLink href="/cadastro">Cadastre-se</StyledLink>
+                    <BtnHome to='/login'>Entrar</BtnHome>
                         <MiniCartIcon src={miniCart} alt="Mini Cart" />
-                    </a>
                 </GridHeader>
             </HeaderWrapper>
             <Navbar>
