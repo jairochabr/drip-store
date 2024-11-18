@@ -3,11 +3,12 @@ import {
   CartSection,
   CartInfo,
   CartContent,
-  ProductImage,
-  ProductDetails,
   ProductCount,
   ProductPrice,
 } from "./style";
+
+import Tennis from '../../assets/tennis/sneakers.png'
+import { Link } from "react-router-dom";
 
 export function CartItems({ unitPrice, productName, productColor, productSize, productImage }) {
   // Estado para quantidade e total
@@ -47,35 +48,62 @@ export function CartItems({ unitPrice, productName, productColor, productSize, p
       </CartInfo>
 
       <CartContent>
-        <ProductImage>
-          <img src={productImage} alt="Produto" />
-        </ProductImage>
-
-        <ProductDetails>
-          <h5>{productName}</h5>
-
-          <div>
-            <span>Cor:</span>
-            <span>{productColor}</span>
+          <div className="content">
+              <div className="image">
+                <img src={Tennis} alt="Produto" />
+              </div>
+              <div className="details">
+                  <h5>Tênis Nike Revolution 6 Next Nature Masculino</h5>
+                  <div className="color">
+                    <span>Cor:</span>
+                    <span>Vermelho/branco</span>
+                  </div>
+                  <div className="size">
+                    <span>Tamanho:</span>
+                    <span>42</span>
+                  </div>
+              </div>
           </div>
-
-          <div>
-            <span>Tamanho:</span>
-            <span>{productSize}</span>
-          </div>
-        </ProductDetails>
 
         <ProductCount>
-          <button onClick={decrementQuantity}>-</button>
-          <span>{quantity}</span>
-          <button onClick={incrementQuantity}>+</button>
+          <div className="count">
+              <button onClick={decrementQuantity}>-</button>
+              <span>{quantity}</span>
+              <button onClick={incrementQuantity}>+</button>
+          </div>
+          <div className="removeItem">
+            <Link>remover item</Link>
+          </div>
         </ProductCount>
 
         <ProductPrice>
-          <span>R$ {unitPrice}</span>
-          <span>R$ {totalPrice}</span>
+            <div className="originalPrice">
+              <span>R$ 219,00</span>
+              <span>R$ 219,00</span>
+             </div>
+             <div className="totalPrice">
+              <span>R$ 219,00</span>
+              <span>R$ 219,00</span>
+             </div>
         </ProductPrice>
       </CartContent>
+
+      <AddressContent>
+        <div className="discount">
+            <span>Cupom de Desconto</span>
+            <div className="cupom">
+                <input type="text" placeholder="Insira seu código"/>
+                <button>ok</button>
+            </div>
+        </div>
+        <div className="discount">
+            <span>Cupom de Desconto</span>
+            <div className="cupom">
+                <input type="text" placeholder="Insira seu código"/>
+                <button>ok</button>
+            </div>
+        </div>
+      </AddressContent>
     </CartSection>
   );
 }
