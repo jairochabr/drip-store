@@ -1,4 +1,4 @@
-import { Login } from "../../components/Login/Login";
+import { Login } from "../../components/Login/Login.jsx";
 
 export function LoginPage() {
   return (
