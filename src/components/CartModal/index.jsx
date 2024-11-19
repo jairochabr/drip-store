@@ -1,4 +1,4 @@
-import { TENNIS } from "@/assets";
+import { useCart } from "@/contexts/CartContext";
 import {
   ButtonEmpty,
   CartButton,
@@ -7,63 +7,37 @@ import {
   CartImage,
   CartInfos,
   CartPrice,
+  EmptyCart,
   ItemsContainer,
   ModalContainer,
   ProductInfos,
   ProductPrice,
+  RemoveButton,
 } from "./style";
-import { useState } from "react";
 
 export function CartModal({ isOpen }) {
+  const { products, setProducts } = useCart();
+
   if (!isOpen) return null;
-  const [isProducts, setIsProducts] = useState([
-    {
-      id: 1,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.00,
-      originalPrice: 219.00,
-      image: TENNIS.sneakers,
-    },
-    {
-      id: 2,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.00,
-      originalPrice: 219.00,
-      image: TENNIS.sneakers,
-    },
-    {
-      id: 3,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.00,
-      originalPrice: 219.00,
-      image: TENNIS.sneakers,
-    },
-    {
-      id: 4,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.00,
-      originalPrice: 219.00,
-      image: TENNIS.sneakers,
-    },
-    {
-      id: 5,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.00,
-      originalPrice: 219.00,
-      image: TENNIS.sneakers,
-    },
-  ]);
+
+  const handleRemoveProduct = (productId) => {
+    setProducts(products.filter((product) => product.id !== productId));
+  };
+
+  const calculateTotal = () => {
+    return products.reduce((total, product) => total + product.price, 0);
+  };
 
   const handleCleanProducts = () => {
-    setIsProducts([])
-  }
+    setProducts([]);
+  };
 
   const formatPrice = (price) => {
     const currencyFormat = price.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
-    return currencyFormat
+    return currencyFormat;
   };
 
   return (
@@ -71,13 +45,18 @@ export function CartModal({ isOpen }) {
       <CartContent>
         <h2 className="title">Meu Carrinho</h2>
         <ItemsContainer>
-          {isProducts.length === 0 ? (
-            <span>carrinho está vazio</span>
+          {products.length === 0 ? (
+            <EmptyCart>
+              <span>carrinho está vazio</span>
+            </EmptyCart>
           ) : (
-            isProducts.map(item => (
+            products.map((item) => (
               <CartInfos key={item.id}>
                 <CartImage>
                   <img src={item.image} alt={item.name} />
+                  <RemoveButton onClick={() => handleRemoveProduct(item.id)}>
+                    x
+                  </RemoveButton>
                 </CartImage>
                 <ProductInfos>
                   <h3 className="title">{item.name}</h3>
@@ -97,7 +76,7 @@ export function CartModal({ isOpen }) {
         <CartPrice>
           <strong>Valor total:</strong>
           <strong className="totalPrice">
-            <span>R$ 219,00</span>
+            <span>{formatPrice(calculateTotal())}</span>
           </strong>
         </CartPrice>
         <CartButtons>

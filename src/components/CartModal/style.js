@@ -28,20 +28,29 @@ export const CartContent = styled.div`
 `;
 
 export const ItemsContainer = styled.div`
-    flex: 1;
-    overflow-y: auto;
-    padding-block: 2rem 0;
-    
-    /* Esconde a scrollbar no Firefox */
-    scrollbar-width: none;
-    
-    /* Esconde a scrollbar no Chrome, Safari e Edge */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    
-    /* Garante que o conteúdo não seja cortado */
-    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+  flex: 1;
+  overflow-y: auto;
+  padding-block: 2rem 0;
+
+  /* Esconde a scrollbar no Firefox */
+  scrollbar-width: none;
+
+  /* Esconde a scrollbar no Chrome, Safari e Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Garante que o conteúdo não seja cortado */
+  -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+`;
+
+export const EmptyCart = styled.div`
+  display: flex;
+  justify-content: center;
+
+  span {
+    color: 1.6rem;
+  }
 `
 
 export const CartInfos = styled.div`
@@ -51,6 +60,29 @@ export const CartInfos = styled.div`
   margin-bottom: 2rem;
 `;
 
+export const RemoveButton = styled.button`
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.colors.error};
+  color: ${({ theme }) => theme.colors.white};
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.error}dd;
+  }
+`;
+
 export const CartImage = styled.div`
   width: 15.4rem;
   height: 6.4rem;
@@ -58,10 +90,17 @@ export const CartImage = styled.div`
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.secondary};
   box-shadow: 0px 2.669px 16.682px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
 
   img {
     width: 66px;
     height: 32px;
+  }
+
+  &:hover {
+    ${RemoveButton} {
+      opacity: 1;
+    }
   }
 `;
 
