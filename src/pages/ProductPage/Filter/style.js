@@ -15,7 +15,8 @@ export const ResultsText = styled.span`
   color: ${({ theme }) => theme.colors.darkGray1};
   cursor: pointer;
   position: absolute;
-  top: 10rem; /* Alinha no topo */
+  top: 17rem; /* Alinha no topo */
+  left: 17rem;
   span {
     font-weight: bold;
   }
@@ -30,18 +31,18 @@ export const OrderSelect = styled.select`
   background-color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   position: absolute;
-  top: 8rem; /* Alinha no topo */
-  right: 45rem; /* Alinha à direita */
+  top: 16.2rem; /* Alinha no topo */
+  right: 17rem; /* Alinha à direita */
 `;
 
 // Container principal do filtro
 export const FilterContainer = styled.div`
   width: 30rem;
+  height: 72rem;
   padding: 2rem;
   border-radius: 0.8rem;
   background-color: ${({ theme }) => theme.colors.white};
-  font-family: Arial, sans-serif;
-  margin-left: 6rem;
+  margin-left: 6.8rem;
 `;
 
 export const FilterTitle = styled.h3`
