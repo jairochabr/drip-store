@@ -1,16 +1,5 @@
-import {
-  HeaderStyle,
-  HeaderWrapper,
-  GridHeader,
-  SearchContainer,
-  SearchInput,
-  SearchButton,
-  Navbar,
-  NavList,
-  StyledLink,
-  BtnHome,
-  MiniCartIcon,
-} from "./style";
+import { HeaderStyle, HeaderWrapper, GridHeader, SearchContainer, SearchInput, SearchButton,Navbar,
+NavList, StyledLink, BtnHome, MiniCartIcon } from "./style";
 import { LuSearch } from "react-icons/lu";
 import { DripStore } from "../icons";
 import miniCart from "../../assets/mini-cart.svg";
@@ -40,7 +29,11 @@ export function Header() {
             <GridHeader>
               <StyledLink href="/cadastro">Cadastre-se</StyledLink>
               <BtnHome to="/login">Entrar</BtnHome>
-              <MiniCartIcon src={miniCart} alt="Mini Cart" />
+              <MiniCartIcon
+                src={miniCart}
+                alt="Mini Cart"
+                onClick={toggleCart}
+              />
             </GridHeader>
           </HeaderWrapper>
           <Navbar>
@@ -53,7 +46,7 @@ export function Header() {
           </Navbar>
         </div>
       </HeaderStyle>
-      <CartModal isOpen={isCartOpen} onClose={toggleCart} />
+      <CartModal isOpen={isCartOpen} />
     </>
   );
 }
