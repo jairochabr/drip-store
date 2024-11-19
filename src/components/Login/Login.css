@@ -53,11 +53,11 @@
     text-decoration-skip-ink: none;
 };
 
-/* .FormLogin {
+.FormLogin {
     display: flex;
     flex-direction: line;
     gap: 1rem; 
-}; */
+}; 
 
 .LoginLabel {
     font-weight: 500;
@@ -72,3 +72,18 @@ input {
     background-color: black;
 };
 
+.Button-Acesse {
+    width: 32.6875rem;
+
+};
+
+.div-Login4 {
+    margin: 0;
+    display: flex;
+
+}
+
+.realizar-login-p {
+   margin-top: 20px; 
+   display: flex;
+}
