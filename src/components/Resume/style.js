@@ -74,7 +74,6 @@ export const Subtotal = styled.div`
   letter-spacing: 0.025rem;
   color: ${({theme}) => theme.colors.darkGray};
   padding: 2rem 0;
-  
   span:first-child {
   color: ${({theme}) => theme.colors.lightGray}
   }
