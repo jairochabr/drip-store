@@ -18,6 +18,45 @@ import {
   Thumbnail,
 } from "./style";
 import { TENNIS } from "@/assets"; // Importe suas imagens de assets
+import { ProductCard } from "@/components/@ui/ProductCard";
+
+const products = [
+  {
+    id: 1,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    discount: 30,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 2,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    discount: 30,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 3,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  {
+    id: 4,
+    name: "K-Swiss V8 - Masculino",
+    category: "Tênis",
+    originalPrice: 200,
+    currentPrice: 100,
+    image: TENNIS.kSwiss,
+  },
+  // Adicione mais produtos conforme necessário
+];
 
 export const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -104,100 +143,108 @@ export const ProductDetails = () => {
   };
 
   return (
-    <CarouselContainer>
-      {/* Exibição das imagens do produto */}
-      <CarouselImages>
-        <Arrow className="prev" onClick={handlePrev}>
-          &#10094;
-        </Arrow>
-        {/* Alterando a imagem para refletir a cor ou índice atual */}
-        <img
-          src={
-            selectedColor
-              ? getImageForColor(selectedColor)
-              : product.images[currentIndex]
-          }
-          alt={`Imagem do produto ${currentIndex + 1}`}
-          className={`image-${currentIndex}`} // Aplicando a classe dinâmica
-        />
-        <Arrow className="next" onClick={handleNext}>
-          &#10095;
-        </Arrow>
+    <>
+      <CarouselContainer>
+        {/* Exibição das imagens do produto */}
+        <CarouselImages>
+          <Arrow className="prev" onClick={handlePrev}>
+            &#10094;
+          </Arrow>
+          {/* Alterando a imagem para refletir a cor ou índice atual */}
+          <img
+            src={
+              selectedColor
+                ? getImageForColor(selectedColor)
+                : product.images[currentIndex]
+            }
+            alt={`Imagem do produto ${currentIndex + 1}`}
+            className={`image-${currentIndex}`} // Aplicando a classe dinâmica
+          />
+          <Arrow className="next" onClick={handleNext}>
+            &#10095;
+          </Arrow>
 
-        {/* Miniaturas para navegar pelas imagens */}
-        <Thumbnails>
-          {product.images.map((image, index) => (
-            <Thumbnail
-              key={index}
-              src={image}
-              alt={`Miniatura ${index + 1}`}
-              onClick={() => {
-                goToImage(index);
-                // Atualizar a cor selecionada quando clicar na miniatura
-                const colors = ["red", "green", "gray", "yellow"];
-                setSelectedColor(colors[index]);
-              }}
-              isActive={index === currentIndex}
-            />
-          ))}
-        </Thumbnails>
-      </CarouselImages>
-
-      {/* Informações do produto */}
-      <TextContent>
-        <h1>{product.name}</h1>
-        <ProductCategory>{product.category}</ProductCategory>
-
-        {/* Avaliação do produto */}
-        <ProductRating>
-          <span>⭐⭐⭐⭐⭐</span> <RatingValue>{product.rating}</RatingValue>{" "}
-          <span>({product.reviews} avaliações)</span>
-        </ProductRating>
-
-        {/* Preço do produto */}
-        <ProductPrice>
-          <CurrentPrice>R$ {product.currentPrice}</CurrentPrice>
-          <OldPrice>R$ {product.originalPrice}</OldPrice>
-        </ProductPrice>
-
-        {/* Descrição do produto */}
-        <ProductDescription>{product.description}</ProductDescription>
-
-        {/* Tamanhos fixos */}
-        <div>
-          <p>Tamanho</p>
-          <SizeOptions>
-            {[39, 40, 41, 42, 43].map((size) => (
-              <button
-                key={size}
-                className={selectedSize === size ? "selected" : ""}
-                onClick={() => handleSizeSelect(size)}
-              >
-                {size}
-              </button>
+          {/* Miniaturas para navegar pelas imagens */}
+          <Thumbnails>
+            {product.images.map((image, index) => (
+              <Thumbnail
+                key={index}
+                src={image}
+                alt={`Miniatura ${index + 1}`}
+                onClick={() => {
+                  goToImage(index);
+                  // Atualizar a cor selecionada quando clicar na miniatura
+                  const colors = ["red", "green", "gray", "yellow"];
+                  setSelectedColor(colors[index]);
+                }}
+                isActive={index === currentIndex}
+              />
             ))}
-          </SizeOptions>
-        </div>
+          </Thumbnails>
+        </CarouselImages>
 
-        {/* Cores fixas */}
-        <div>
-          <p>Cor</p>
-          <ColorOptions>
-            {["red", "green", "gray", "yellow"].map((color) => (
-              <button
-                key={color}
-                className={`color ${color} ${
-                  selectedColor === color ? "selected" : ""
-                }`}
-                onClick={() => handleColorSelect(color)}
-              ></button>
-            ))}
-          </ColorOptions>
-        </div>
+        {/* Informações do produto */}
+        <TextContent>
+          <h1>{product.name}</h1>
+          <ProductCategory>{product.category}</ProductCategory>
 
-        {/* Botão de compra */}
-        <BuyButton onClick={handleBuyClick}>COMPRAR</BuyButton>
-      </TextContent>
-    </CarouselContainer>
+          {/* Avaliação do produto */}
+          <ProductRating>
+            <span>⭐⭐⭐⭐⭐</span> <RatingValue>{product.rating}</RatingValue>{" "}
+            <span>({product.reviews} avaliações)</span>
+          </ProductRating>
+
+          {/* Preço do produto */}
+          <ProductPrice>
+            <CurrentPrice>R$ {product.currentPrice}</CurrentPrice>
+            <OldPrice>R$ {product.originalPrice}</OldPrice>
+          </ProductPrice>
+
+          {/* Descrição do produto */}
+          <ProductDescription>{product.description}</ProductDescription>
+
+          {/* Tamanhos fixos */}
+          <div>
+            <p>Tamanho</p>
+            <SizeOptions>
+              {[39, 40, 41, 42, 43].map((size) => (
+                <button
+                  key={size}
+                  className={selectedSize === size ? "selected" : ""}
+                  onClick={() => handleSizeSelect(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </SizeOptions>
+          </div>
+
+          {/* Cores fixas */}
+          <div>
+            <p>Cor</p>
+            <ColorOptions>
+              {["red", "green", "gray", "yellow"].map((color) => (
+                <button
+                  key={color}
+                  className={`color ${color} ${
+                    selectedColor === color ? "selected" : ""
+                  }`}
+                  onClick={() => handleColorSelect(color)}
+                ></button>
+              ))}
+            </ColorOptions>
+          </div>
+
+          {/* Botão de compra */}
+          <BuyButton onClick={handleBuyClick}>COMPRAR</BuyButton>
+        </TextContent>
+      </CarouselContainer>
+
+      <div style={{ display: "flex", gap: "20px" }}>
+      {products.map((products) => (
+          <ProductCard key={products.id} product={products} />
+        ))}
+        </div>
+    </>
   );
 };
