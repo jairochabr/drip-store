@@ -118,6 +118,7 @@ export const ProductDetails = () => {
               : product.images[currentIndex]
           }
           alt={`Imagem do produto ${currentIndex + 1}`}
+          className={`image-${currentIndex}`} // Aplicando a classe dinâmica
         />
         <Arrow className="next" onClick={handleNext}>
           &#10095;

@@ -23,9 +23,28 @@ export const CarouselImages = styled.div`
 
   img {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    padding: 10px; /* Adicionando um pequeno preenchimento */
+  }
+
+  /* Aplique o fundo pastel com base no índice da imagem */
+  .image-0 {
+    background-color: #ff6f61; /* Rosa pastel */
+  }
+
+  .image-1 {
+    background-color: #a8d5ba; /* Verde pastel */
+  }
+
+  .image-2 {
+    background-color: #d3d3d3; /* Azul pastel */
+  }
+
+  .image-3 {
+    background-color: #fffacd; /* Amarelo pastel */
   }
 `;
 
@@ -63,72 +82,93 @@ export const Thumbnail = styled.img`
   border: ${({ isActive }) => (isActive ? "2px solid #d91467" : "none")};
   border-radius: 5px;
   transition: opacity 0.3s ease-in-out;
-`;
 
-export const TextContent = styled.div`
-  width: 50%;
-  padding: 0 20px;
+  /* Fundo pastel para as miniaturas com base no índice */
+  &:nth-child(1) {
+    background-color: #ff6f61; /* Rosa pastel */
+  }
 
-  h1 {
-    font-size: 28px;
-    font-weight: bold;
+  &:nth-child(2) {
+    background-color: #a8d5ba; /* Verde pastel */
+  }
+
+  &:nth-child(3) {
+    background-color: #d3d3d3; /* Azul pastel */
+  }
+
+  &:nth-child(4) {
+    background-color: #fffacd; /* Amarelo pastel */
   }
 `;
 
-export const ProductCategory = styled.p`
-  font-size: 14px;
-  color: #777;
+export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 500px;
+`;
+
+export const ProductCategory = styled.h3`
+  color: #7d7d7d;
+  font-size: 18px;
+  margin-bottom: 10px;
 `;
 
 export const ProductRating = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  font-size: 16px;
+  color: #ffcc00;
 `;
 
 export const RatingValue = styled.span`
-  margin-left: 5px;
   font-weight: bold;
-  color: #ffba00;
 `;
 
 export const ProductPrice = styled.div`
-  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-top: 15px;
 `;
 
 export const CurrentPrice = styled.span`
-  font-size: 24px;
-  font-weight: bold;
   color: #d91467;
-  margin-right: 10px;
+  font-size: 26px;
+  font-weight: bold;
 `;
 
 export const OldPrice = styled.span`
+  color: #888;
   text-decoration: line-through;
-  color: #aaa;
+  margin-left: 10px;
 `;
 
 export const ProductDescription = styled.p`
+  color: #333;
   font-size: 14px;
-  color: #555;
-  margin: 10px 0;
+  margin-top: 15px;
 `;
 
 export const SizeOptions = styled.div`
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 
   button {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: white;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
 
-    &.selected {
-      background-color: #d91467;
-      color: white;
-    }
+  button.selected {
+    background-color: #d91467;
+    color: white;
   }
 `;
 
