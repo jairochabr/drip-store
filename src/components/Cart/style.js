@@ -12,7 +12,7 @@ export const CartInfo = styled.div`
     display: flex;
     justify-content: space-between;
     width: 83rem;
-    height: 2.2rem;
+    height: 4rem;
     border-bottom: 0.1rem solid ${({theme}) => theme.colors.lightGray2};
     font-family: ${({theme}) => theme.font.family};
     font-size: 1.4rem;
@@ -54,9 +54,10 @@ export const CartInfo = styled.div`
 
 export const CartContent = styled.div`
     display: flex;
+    justify-content: space-between;
     width: 83rem;
     height: 10.4rem;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 
     .content {
         width: 36.6rem;
@@ -143,108 +144,164 @@ export const CartContent = styled.div`
 
 `;
 
-export const ProductCount = styled.div`
+export const ProductDetails = styled.div`
     display: flex;
-    flex-direction: column;
-    width: 11.229rem;
-    height: 7.3rem;
-    margin: 0 2rem 0 12rem;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 34.629rem;
+    gap: 3rem;
 
-    .count {
+    .productCount {
         display: flex;
-        flex-direction: row;
-
-        button {
-            width: 3.5rem;
-            height: 3.5rem;
+        flex-direction: column;
+        width: 11.229rem;
+        height: 7.3rem;
+    
+        .count {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            button {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3.5rem;
+                height: 3.5rem;
+            }
         }
     
-        span {
+        .removeItem {
+            height: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3.5rem;
-            height: 3.5rem;
+            text-align: center;
+    
+            a{
+                text-decoration: underline;
+                cursor: pointer;
+                
+            }
         }
     }
 
-    .removeItem {
-        text-align: center;
-        margin: 1rem 0.5rem;
-
-        a{
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
-`;
-
-export const ProductPrice = styled.div`
-    display: flex;
-    justify-content: end;
-
-    .originalPrice{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 8.6rem;
-        height: 5.4rem;
-        margin: 0 1.2rem;
-        
-        span:first-child {
-            width: 7.3rem;
-            height: 2.8rem;
-            font-family: ${({theme}) => theme.font.family};
-            font-size: 1.4rem;
-            line-height: 2.8rem;
-            letter-spacing: 0.025rem;
-            font-weight: ${({theme}) => theme.font.weight.normal};
-            text-decoration: line-through;
-            color: ${({theme}) => theme.colors.lightGray2}; 
-        }
-        span:last-child {
+        .originalPrice{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 8.6rem;
-            height: 2.4rem;
-            font-family: ${({theme}) => theme.font.family};
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            letter-spacing: 0.025rem;
-            font-weight: ${({theme}) => theme.font.weight.bold};
-            color: ${({theme}) => theme.colors.darkGray2};        
+            height: 5.4rem;
+            
+            span:first-child {
+                width: 7.3rem;
+                height: 2.8rem;
+                text-align: center;
+                font-family: ${({theme}) => theme.font.family};
+                font-size: 1.4rem;
+                line-height: 2.8rem;
+                letter-spacing: 0.025rem;
+                font-weight: ${({theme}) => theme.font.weight.normal};
+                text-decoration: line-through;
+                color: ${({theme}) => theme.colors.lightGray2}; 
+            }
+            span:last-child {
+                width: 8.6rem;
+                height: 2.4rem;
+                text-align: center;
+                font-family: ${({theme}) => theme.font.family};
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                letter-spacing: 0.025rem;
+                font-weight: ${({theme}) => theme.font.weight.bold};
+                color: ${({theme}) => theme.colors.darkGray2};        
+            }
         }
-    }
-    .totalPrice{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 8.6rem;
-        height: 5.4re;
-        margin: 0 0 0 1.7rem ;
-
-        span:first-child {
-            width: 7.3rem;
-            height: 2.8rem;
-            font-family: ${({theme}) => theme.font.family};
-            font-size: 1.4rem;
-            line-height: 2.8rem;
-            letter-spacing: 0.025rem;
-            font-weight: ${({theme}) => theme.font.weight.normal};
-            text-decoration: line-through;
-            color: ${({theme}) => theme.colors.lightGray2}; 
-        }
-        span:last-child {
+        .totalPrice{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 8.6rem;
-            height: 2.4rem;
-            font-family: ${({theme}) => theme.font.family};
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            letter-spacing: 0.025rem;
-            font-weight: ${({theme}) => theme.font.weight.bold};
-            color: ${({theme}) => theme.colors.darkGray2};        
+            height: 5.4re;
+    
+            span:first-child {
+                width: 7.3rem;
+                height: 2.8rem;
+                text-align: center;
+                font-family: ${({theme}) => theme.font.family};
+                font-size: 1.4rem;
+                line-height: 2.8rem;
+                letter-spacing: 0.025rem;
+                font-weight: ${({theme}) => theme.font.weight.normal};
+                text-decoration: line-through;
+                color: ${({theme}) => theme.colors.lightGray2}; 
+            }
+            span:last-child {
+                width: 8.6rem;
+                height: 2.4rem;
+                text-align: center;
+                font-family: ${({theme}) => theme.font.family};
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                letter-spacing: 0.025rem;
+                font-weight: ${({theme}) => theme.font.weight.bold};
+                color: ${({theme}) => theme.colors.darkGray2};        
+            }
         }
-    }
+
 `;
 
 export const AddressContent = styled.div`
-    
+    display: flex;
+    justify-content: space-between;
+    width: 83rem;
+    height: 8.9rem;
+    padding-top: 2rem;
+    border-top: 0.1rem solid ${({theme}) => theme.colors.lightGray2};
+
+    .discount {
+        display: flex;
+        flex-direction: column;
+        width: 39.4rem;
+        height: 8.9rem;
+
+        span {
+            width: 13.1rem;
+            height: 2.4rem;
+            font-family: ${({theme}) => theme.font.family};
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.025rem;
+            font-weight: ${({theme}) => theme.font.weight.bold};
+            color: ${({theme}) => theme.colors.darkGray2}; 
+        }
+
+        .cupom {
+            display: flex;
+            gap: 2rem;
+
+            input {
+                width: 27rem;
+                height: 6rem;
+                background-color: ${({theme}) => theme.colors.lightGray3};
+                border: none;
+                border-radius: 0.8rem;
+                padding: 2rem;
+            }
+
+            button {
+                width: 11.4rem;
+                height: 6rem;
+                background-color: ${({theme}) => theme.colors.lightGray3};
+                color: ${({theme}) => theme.colors.primary};
+                border: none;
+                border-radius: 0.8rem;
+            }
+        }
+    }
 `;

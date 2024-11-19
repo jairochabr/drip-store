@@ -3,8 +3,8 @@ import {
   CartSection,
   CartInfo,
   CartContent,
-  ProductCount,
-  ProductPrice,
+  ProductDetails,
+  AddressContent
 } from "./style";
 
 import Tennis from '../../assets/tennis/sneakers.png'
@@ -36,14 +36,18 @@ export function CartItems({ unitPrice, productName, productColor, productSize, p
     });
   };
 
+  const removeItem = () => {
+    setQuantity(0); // Zera a quantidade
+  };
+
   return (
     <CartSection>
       <CartInfo>
-        <span>Meu Carrinho</span>
+        <span>MEU CARRINHO</span>
         <div className="info-section">
-            <span>Quantidade</span>
-            <span>Unitário</span>
-            <span>Total</span>
+            <span>QUANTIDADE</span>
+            <span>UNITÁRIO</span>
+            <span>TOTAL</span>
         </div>
       </CartInfo>
 
@@ -65,27 +69,30 @@ export function CartItems({ unitPrice, productName, productColor, productSize, p
               </div>
           </div>
 
-        <ProductCount>
-          <div className="count">
-              <button onClick={decrementQuantity}>-</button>
-              <span>{quantity}</span>
-              <button onClick={incrementQuantity}>+</button>
+        <ProductDetails>
+          <div className="productCount">
+            <div className="count">
+                <button onClick={decrementQuantity}>-</button>
+                <span>{quantity}</span>
+                <button onClick={incrementQuantity}>+</button>
+            </div>
+            <div className="removeItem">
+              <Link 
+              onClick={(e) => { 
+                e.preventDefault(); // Evita comportamento padrão do link
+                removeItem(); // Chama a função para zerar a quantidade 
+                }}>remover item</Link>
+            </div>
           </div>
-          <div className="removeItem">
-            <Link>remover item</Link>
-          </div>
-        </ProductCount>
-
-        <ProductPrice>
-            <div className="originalPrice">
-              <span>R$ 219,00</span>
-              <span>R$ 219,00</span>
-             </div>
-             <div className="totalPrice">
-              <span>R$ 219,00</span>
-              <span>R$ 219,00</span>
-             </div>
-        </ProductPrice>
+              <div className="originalPrice">
+                <span>R$ 219,00</span>
+                <span>R$ 219,00</span>
+               </div>
+               <div className="totalPrice">
+                <span>R$ 219,00</span>
+                <span>R$ 219,00</span>
+               </div>
+        </ProductDetails>
       </CartContent>
 
       <AddressContent>
@@ -97,9 +104,9 @@ export function CartItems({ unitPrice, productName, productColor, productSize, p
             </div>
         </div>
         <div className="discount">
-            <span>Cupom de Desconto</span>
+            <span>Calcular frete</span>
             <div className="cupom">
-                <input type="text" placeholder="Insira seu código"/>
+                <input type="text" placeholder="Insira seu CEP"/>
                 <button>ok</button>
             </div>
         </div>
