@@ -31,7 +31,7 @@ export const Carousel = styled.div`
 export const Container = styled.div`
   display: flex;
   transition: ${(props) =>
-    props.$transition ? "transform 0.5s ease" : "none"};
+    props.$transition ? "transform 0.5s ease" : ""};
   position: relative;
   transform: translateX(-${(props) => props.$currentIndex * 100}%);
 `;
