@@ -9,8 +9,8 @@ export const ModalContainer = styled.div`
   padding: 3rem;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 5rem;
-  right: 3rem;
+  top: 5.8rem;
+  right: 16.6rem;
   z-index: 5;
 `;
 
