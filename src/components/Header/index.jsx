@@ -1,14 +1,17 @@
-import { HeaderStyle, HeaderWrapper, GridHeader, SearchContainer, SearchInput, SearchButton,Navbar,
-NavList, StyledLink, BtnHome, MiniCartIcon } from "./style";
+import { HeaderStyle, HeaderWrapper, GridHeader, SearchContainer, SearchInput, SearchButton, Navbar,
+NavList, StyledLink, BtnHome, MiniCartIcon, CartIconWrapper, CartCount,} from "./style";
 import { LuSearch } from "react-icons/lu";
 import { DripStore } from "../icons";
 import miniCart from "../../assets/mini-cart.svg";
 import { NavLink } from "react-router-dom";
-import { CartModal } from "../CartModal";
 import { useState } from "react";
+import { CartModal } from "../CartModal";
+import { useCart } from "@/contexts/CartContext";
 
 export function Header() {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const { products } = useCart();
+
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
@@ -29,11 +32,16 @@ export function Header() {
             <GridHeader>
               <StyledLink href="/cadastro">Cadastre-se</StyledLink>
               <BtnHome to="/login">Entrar</BtnHome>
-              <MiniCartIcon
-                src={miniCart}
-                alt="Mini Cart"
-                onClick={toggleCart}
-              />
+              <CartIconWrapper>
+                <MiniCartIcon
+                  src={miniCart}
+                  alt="Mini Cart"
+                  onClick={toggleCart}
+                />
+                {products.length > 0 && (
+                  <CartCount>{products.length}</CartCount>
+                )}
+              </CartIconWrapper>
             </GridHeader>
           </HeaderWrapper>
           <Navbar>

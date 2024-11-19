@@ -97,3 +97,25 @@ export const MiniCartIcon = styled.img`
     width: auto; 
     cursor: pointer;
 `;
+
+export const CartIconWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+`;
+
+export const CartCount = styled.span`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: ${({ theme }) => theme.colors.error};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: 50%;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  padding: 0 4px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+`;
