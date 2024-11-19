@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Para navegação
 import {
   CarouselContainer,
   CarouselImages,
@@ -16,6 +17,8 @@ import {
   Arrow,
   Thumbnails,
   Thumbnail,
+  RelatedProductsHeader,
+  ProductGrid,
 } from "./style";
 import { TENNIS } from "@/assets"; // Importe suas imagens de assets
 import { ProductCard } from "@/components/@ui/ProductCard";
@@ -55,15 +58,14 @@ const products = [
     currentPrice: 100,
     image: TENNIS.kSwiss,
   },
-  // Adicione mais produtos conforme necessário
 ];
 
 export const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
+  const navigate = useNavigate();
 
-  // Produto fixo
   const product = {
     name: "K-Swiss V8 - Masculino",
     category: "Tênis",
@@ -82,7 +84,6 @@ export const ProductDetails = () => {
     reviews: 90,
   };
 
-  // Função para pegar a imagem com base na cor selecionada
   const getImageForColor = (color) => {
     switch (color) {
       case "red":
@@ -204,7 +205,9 @@ export const ProductDetails = () => {
           <ProductDescription>{product.description}</ProductDescription>
 
           {/* Tamanhos fixos */}
-          <div>
+          <div className="size-options">
+            <br />
+            <br />
             <p>Tamanho</p>
             <SizeOptions>
               {[39, 40, 41, 42, 43].map((size) => (
@@ -220,7 +223,9 @@ export const ProductDetails = () => {
           </div>
 
           {/* Cores fixas */}
-          <div>
+          <div className="color-options">
+            <br />
+            <br />
             <p>Cor</p>
             <ColorOptions>
               {["red", "green", "gray", "yellow"].map((color) => (
@@ -234,17 +239,20 @@ export const ProductDetails = () => {
               ))}
             </ColorOptions>
           </div>
-
-          {/* Botão de compra */}
           <BuyButton onClick={handleBuyClick}>COMPRAR</BuyButton>
         </TextContent>
       </CarouselContainer>
 
-      <div style={{ display: "flex", gap: "20px" }}>
-      {products.map((products) => (
-          <ProductCard key={products.id} product={products} />
+      <RelatedProductsHeader>
+        <h2>Produtos Relacionados</h2>
+        <button onClick={() => navigate("/produtos")}>Ver todos ➔</button>
+      </RelatedProductsHeader>
+
+      <ProductGrid>
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
-        </div>
+      </ProductGrid>
     </>
   );
 };

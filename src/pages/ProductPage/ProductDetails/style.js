@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const CarouselContainer = styled.div`
   display: flex;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 10rem;
+  max-width: 1400px;
   margin: 0 auto;
   background-color: #f8f9fb;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10rem;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.lightGray};
 `;
 
 export const CarouselImages = styled.div`
@@ -20,6 +21,7 @@ export const CarouselImages = styled.div`
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
+  margin-bottom: 14rem;
 
   img {
     max-width: 100%;
@@ -71,7 +73,7 @@ export const Thumbnails = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 15px;
-  gap: 15px; /* Aumentado o espaço entre as miniaturas */
+  gap: 15px;
 `;
 
 export const Thumbnail = styled.img`
@@ -101,18 +103,64 @@ export const Thumbnail = styled.img`
   }
 `;
 
+export const RelatedProductsHeader = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -8rem;
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.darkGray2};
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const ProductGrid = styled.div`
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`;
+
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 500px;
+  max-width: 50rem;
+  margin-bottom: 30rem;
+
+  h1 {
+    color: ${({ theme }) => theme.colors.darkGray};
+    font-weight: bold;
+  }
 `;
 
 export const ProductCategory = styled.h3`
-  color: #7d7d7d;
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: ${({ theme }) => theme.colors.lightGray};
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 `;
 
 export const ProductRating = styled.div`
@@ -140,26 +188,29 @@ export const CurrentPrice = styled.span`
 `;
 
 export const OldPrice = styled.span`
-  color: #888;
+  color: ${({ theme }) => theme.colors.lightGray};
   text-decoration: line-through;
   margin-left: 10px;
 `;
 
 export const ProductDescription = styled.p`
-  color: #333;
-  font-size: 14px;
-  margin-top: 15px;
+  color: ${({ theme }) => theme.colors.darkGray2};
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 3rem;
 `;
 
 export const SizeOptions = styled.div`
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 1rem;
+  margin-top: 3rem;
+  color: ${({ theme }) => theme.colors.lightGray}; /* Adicionando a cor */
+  font-weight: bold;
 
   button {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border: 0.1rem solid ${({ theme }) => theme.colors.lightGray2};
     background-color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -174,8 +225,10 @@ export const SizeOptions = styled.div`
 
 export const ColorOptions = styled.div`
   display: flex;
-  gap: 10px;
-
+  gap: 2.5rem;
+  margin-top: 3rem;
+  color: ${({ theme }) => theme.colors.lightGray}; /* Adicionando a cor */
+  font-weight: bold;
   .color {
     width: 40px;
     height: 40px;
