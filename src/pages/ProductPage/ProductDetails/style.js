@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SlideContainer = styled.div`
+export const CarouselContainer = styled.div`
   display: flex;
   gap: 20px;
   max-width: 1200px;
@@ -10,23 +10,59 @@ export const SlideContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   align-items: center;
-  overflow: hidden; /* Adicione esta linha para evitar a barra de rolagem */
   font-family: Arial, Helvetica, sans-serif;
 `;
 
-export const SlideImages = styled.div`
+export const CarouselImages = styled.div`
   position: relative;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
 `;
 
-export const SlideImage = styled.img`
-  max-width: 100%;
-  border-radius: 10px;
+export const Arrow = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
+  color: #333;
+
+  &.prev {
+    left: -25px;
+  }
+
+  &.next {
+    right: -25px;
+  }
+`;
+
+export const Thumbnails = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px; /* Aumentado o espaço entre as miniaturas */
+`;
+
+export const Thumbnail = styled.img`
+  width: 100px; /* Aumentado o tamanho das miniaturas */
+  height: 100px; /* Aumentado o tamanho das miniaturas */
+  cursor: pointer;
+  opacity: ${({ isActive }) => (isActive ? "1" : "0.7")};
+  border: ${({ isActive }) => (isActive ? "2px solid #d91467" : "none")};
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
 `;
 
 export const TextContent = styled.div`
@@ -78,10 +114,6 @@ export const ProductDescription = styled.p`
   margin: 10px 0;
 `;
 
-export const ProductSize = styled.div`
-  margin-top: 15px;
-`;
-
 export const SizeOptions = styled.div`
   display: flex;
   gap: 10px;
@@ -100,41 +132,38 @@ export const SizeOptions = styled.div`
   }
 `;
 
-export const ProductColor = styled.div`
-  margin-top: 15px;
-`;
-
 export const ColorOptions = styled.div`
   display: flex;
   gap: 10px;
-`;
 
-export const ColorOption = styled.button`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
+  .color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
 
-  &.red {
-    background-color: red;
-  }
+    &.selected {
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px #d91467;
+    }
 
-  &.orange {
-    background-color: orange;
-  }
+    &.red {
+      background-color: red;
+    }
 
-  &.gray {
-    background-color: gray;
-  }
+    &.yellow {
+      background-color: yellow;
+    }
 
-  &.green {
-    background-color: green;
-  }
+    &.gray {
+      background-color: gray;
+    }
 
-  &.selected {
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px #d91467;
+    &.green {
+      background-color: green;
+    }
   }
 `;
 
