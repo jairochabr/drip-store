@@ -8,6 +8,7 @@ export const PageContainer = styled.div`
 
 export const FilterContainer = styled.div`
   flex: 1;
+  display: flex;
   margin-right: 2rem;
 `;
 
