@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 58.3rem;
+    height: 56rem;
+    top: 20rem;
+    left: 10rem;
+    border-radius: .4rem;
+    padding: 3rem;
+    gap: 3rem;
+    background-color: white;
+}
+
+.AcesseSuaConta {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.1rem;
+    color: #1f1f1f;
+};
+
+.NovoCliente p {
+    font-weight: 400;
+    height: 2.8rem;
+    left: 3rem;
+    gap: 36.5rem;
+    top: 8.6rem;
+    align-items: center;
+    color: var(--primary);
+
+};
+
+.CliqueAqui {
+    color: #007bff;
+    text-decoration: underline !important;
+};
+
+.Senha {
+    /* display: block; 
+    margin-bottom: 0.5rem;  */
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: .075rem;
+};
+
+.EsqueciSenha {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: .025rem;
+    text-decoration-skip-ink: none;
+};
+
+/* .FormLogin {
+    display: flex;
+    flex-direction: line;
+    gap: 1rem; 
+}; */
+
+.LoginLabel {
+    font-weight: 500;
+};
+
+input {
+    width: 52.3rem;
+    height: 6rem;
+    top: 17.3rem;
+    left: 3rem;
+    border-radius: .8rem;
+    background-color: black;
+};
+

@@ -1,0 +1,17 @@
+import Ornament from './Ornament.svg'
+
+// Tennis
+import SneakersImg from './tennis/sneakers.png'
+import KSwissImg from './tennis/k-swiss-v8.png'
+import DunkHighImg from './tennis/dunk-high.png'
+
+export const TENNIS = {
+  sneakers: SneakersImg,
+  kSwiss: KSwissImg,
+  dunkHigh: DunkHighImg
+}
+
+// other images
+export {
+  Ornament
+}
