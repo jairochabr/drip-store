@@ -12,9 +12,11 @@ import {
   ProductInfos,
   ProductPrice,
 } from "./style";
+import { useState } from "react";
 
-export function CartModal() {
-  const cartItems = [
+export function CartModal({ isOpen }) {
+  if (!isOpen) return null;
+  const [isProducts, setIsProducts] = useState([
     {
       id: 1,
       name: "Tênis Nike Revolution 6 Next Nature Masculino",
@@ -50,7 +52,11 @@ export function CartModal() {
       originalPrice: 219.00,
       image: TENNIS.sneakers,
     },
-  ];
+  ]);
+
+  const handleCleanProducts = () => {
+    setIsProducts([])
+  }
 
   const formatPrice = (price) => {
     const currencyFormat = price.toLocaleString("pt-BR", {
@@ -61,28 +67,32 @@ export function CartModal() {
   };
 
   return (
-    <ModalContainer>
+    <ModalContainer isOpen={isOpen}>
       <CartContent>
         <h2 className="title">Meu Carrinho</h2>
         <ItemsContainer>
-          {cartItems.map(item => (
-            <CartInfos key={item.id}>
-              <CartImage>
-                <img src={item.image} alt={item.name} />
-              </CartImage>
-              <ProductInfos>
-                <h3 className="title">{item.name}</h3>
-                <ProductPrice>
-                  <strong className="currentPrice">
-                    <span>{formatPrice(item.price)}</span>
-                  </strong>
-                  <s className="originalPrice">
-                    <span>{formatPrice(item.originalPrice)}</span>
-                  </s>
-                </ProductPrice>
-              </ProductInfos>
-            </CartInfos>
-          ))}
+          {isProducts.length === 0 ? (
+            <span>carrinho está vazio</span>
+          ) : (
+            isProducts.map(item => (
+              <CartInfos key={item.id}>
+                <CartImage>
+                  <img src={item.image} alt={item.name} />
+                </CartImage>
+                <ProductInfos>
+                  <h3 className="title">{item.name}</h3>
+                  <ProductPrice>
+                    <strong className="currentPrice">
+                      <span>{formatPrice(item.price)}</span>
+                    </strong>
+                    <s className="originalPrice">
+                      <span>{formatPrice(item.originalPrice)}</span>
+                    </s>
+                  </ProductPrice>
+                </ProductInfos>
+              </CartInfos>
+            ))
+          )}
         </ItemsContainer>
         <CartPrice>
           <strong>Valor total:</strong>
@@ -91,7 +101,7 @@ export function CartModal() {
           </strong>
         </CartPrice>
         <CartButtons>
-          <ButtonEmpty>Esvaziar</ButtonEmpty>
+          <ButtonEmpty onClick={handleCleanProducts}>Esvaziar</ButtonEmpty>
           <CartButton>Ver Carrinho</CartButton>
         </CartButtons>
       </CartContent>
