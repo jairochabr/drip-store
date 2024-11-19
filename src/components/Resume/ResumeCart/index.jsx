@@ -1,19 +1,15 @@
 import React from 'react';
 import {
   ResumeContainer,
-  ProductImage,
   Subtotal,
   Frete,
   Desconto,
   Total,
   CustomButton
 } from './style';
-// import { Button } from '../@ui/Button';
 
-export function Resume({
+export function ResumeCart({
   title = 'RESUMO',
-  productImage,
-  productName,
   subtotal,
   frete,
   desconto,
@@ -24,12 +20,6 @@ export function Resume({
   return (
     <ResumeContainer>
       <h1>{title}</h1>
-      <ProductImage>
-        <div className='image'>
-          <img src={productImage} alt="Produto" />
-        </div>
-        <h5>{productName}</h5>
-      </ProductImage>
       <Subtotal>
         <span>Subtotal: </span>
         <span>{subtotal}</span>
@@ -56,3 +46,4 @@ export function Resume({
       </CustomButton>
     </ResumeContainer>
   );
+}

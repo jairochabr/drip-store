@@ -4,15 +4,14 @@ import { Button } from "../@ui/Button";
 export const ResumeContainer = styled.div`
   width: 46.8rem;
   height: 53.2rem;
-  background-color: gray;
   padding: 3rem;
   border-radius: 0.4rem;
   background-color: ${({ theme }) => theme.colors.white};
 
   h1 {
     width: 40.8rem;
-    height: 3.8rem;
-    padding-bottom: 1.5rem;
+    height: 5.8rem;
+    padding-bottom: 2rem;
     border-bottom: 0.1rem solid ${({ theme }) => theme.colors.lightGray2};
     font-family: ${({ theme }) => theme.font.family};;
     font-size: 2.4rem;
@@ -24,11 +23,11 @@ export const ResumeContainer = styled.div`
 
 export const ProductImage = styled.div`
   width: 40.8rem;
-  height: 5.8rem;
+  height: 7.5rem;
   display: flex;
   gap: 2rem;
-  margin: 1.5rem 0;
-  padding: 0 0 1.5rem;
+  margin: 3rem 0 0 0;
+  padding: 0 0 3rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.lightGray2};
   align-items: center;
 
@@ -74,8 +73,7 @@ export const Subtotal = styled.div`
   font-weight: ${({ theme }) => theme.font.weight.medium};
   letter-spacing: 0.025rem;
   color: ${({theme}) => theme.colors.darkGray};
-
-  
+  padding: 2rem 0;
   span:first-child {
   color: ${({theme}) => theme.colors.lightGray}
   }
@@ -121,7 +119,7 @@ export const Total = styled.div`
   border-radius: 0.4rem;
   border: 0.1rem solid #F6AA1C26;
   padding: 2rem;
-  margin: 15px 0;
+  margin: 17px 0;
   background-color: #F6AA1C0D;
   align-items: center;
 
