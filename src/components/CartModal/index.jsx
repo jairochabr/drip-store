@@ -81,7 +81,7 @@ export function CartModal({ isOpen }) {
         </CartPrice>
         <CartButtons>
           <ButtonEmpty onClick={handleCleanProducts}>Esvaziar</ButtonEmpty>
-          <CartButton>Ver Carrinho</CartButton>
+          <CartButton to='/pedidos'>Ver Carrinho</CartButton>
         </CartButtons>
       </CartContent>
     </ModalContainer>
