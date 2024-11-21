@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FilterContainer,
   FilterTitle,
@@ -6,7 +6,6 @@ import {
   FilterOption,
   FilterCheckbox,
   FilterRadio,
-  FilterSelect,
   ResultsContainer,
   ResultsText,
   OrderSelect,
