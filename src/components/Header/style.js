@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../@ui/Button";
+import { Link } from "react-router-dom";
 
 export const HeaderStyle = styled.header`
    width: 100%;
@@ -80,7 +81,7 @@ export const NavList = styled.ul`
     }
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
     padding: 1rem 1.6rem;
     color: ${({ theme }) => theme.colors.darkGray};
     font-weight: 400;
