@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Loading } from "@/components/Loading";
 import Filter from "./Filter";
 import { ProductList } from "./ProductList";
 import { ProductDetails } from "./ProductDetails";
