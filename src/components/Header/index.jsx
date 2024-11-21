@@ -29,7 +29,7 @@ export function Header() {
               </SearchContainer>
             </GridHeader>
             <GridHeader>
-              <StyledLink href="/cadastro">Cadastre-se</StyledLink>
+              <StyledLink to="/cadastro">Cadastre-se</StyledLink>
               <BtnHome to="/login">Entrar</BtnHome>
               <CartIconWrapper>
                 <MiniCart onClick={toggleCart} />
