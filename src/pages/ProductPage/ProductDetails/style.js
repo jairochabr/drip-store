@@ -1,5 +1,21 @@
 import styled from "styled-components";
 
+export const ResultsText = styled.span`
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: ${({ theme }) => theme.colors.darkGray3};
+  cursor: pointer;
+  position: absolute;
+  top: 8rem; /* Alinha no topo */
+  right: 83.5rem; /* Move para a direita */
+  /* ou left: auto; */
+  span {
+    color: ${({ theme }) => theme.colors.darkGray};
+    font-weight: bold;
+  }
+`;
+
 export const CarouselContainer = styled.div`
   display: flex;
   gap: 10rem;
@@ -105,9 +121,10 @@ export const Thumbnail = styled.img`
 
 export const RelatedProductsHeader = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: -8rem;
+  margin-inline: 12rem;
 
   h2 {
     font-size: 2.4rem;
@@ -165,13 +182,18 @@ export const ProductCategory = styled.h3`
 
 export const ProductRating = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: around;
   font-size: 16px;
-  color: #ffcc00;
+  color: ${({ theme }) => theme.colors.lightGray};
+  gap: 0.5rem;
 `;
 
 export const RatingValue = styled.span`
   font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.warning};
+  border-radius: 0.2rem;
+  padding: 0.3rem;
 `;
 
 export const ProductPrice = styled.div`

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Para navegação
 import {
+  ResultsText,
   CarouselContainer,
   CarouselImages,
   TextContent,
@@ -67,10 +68,10 @@ export const ProductDetails = () => {
   const navigate = useNavigate();
 
   const product = {
-    name: "K-Swiss V8 - Masculino",
+    name: "Tênis Nike Revolution 6 Next Nature Masculino",
     category: "Tênis",
-    originalPrice: 200,
-    currentPrice: 100,
+    originalPrice: 300,
+    currentPrice: 219,
     discount: 30,
     images: [
       TENNIS.nikered,
@@ -80,7 +81,7 @@ export const ProductDetails = () => {
     ],
     description:
       "O Tênis K-Swiss V8 Masculino é ideal para quem busca performance e estilo. Com um design moderno e materiais de alta qualidade, oferece conforto durante todo o dia. A sola de borracha garante aderência e estabilidade, enquanto o cabedal proporciona ventilação adequada para os pés.",
-    rating: 4.7,
+    rating: "5.0",
     reviews: 90,
   };
 
@@ -145,6 +146,10 @@ export const ProductDetails = () => {
 
   return (
     <>
+      <ResultsText>
+        Home / Produtos / Tênis / Nike /{" "}
+        <span>Tênis Nike Revolution 6 Next Nature Masculino</span>
+      </ResultsText>
       <CarouselContainer>
         {/* Exibição das imagens do produto */}
         <CarouselImages>
@@ -197,7 +202,7 @@ export const ProductDetails = () => {
 
           {/* Preço do produto */}
           <ProductPrice>
-            <CurrentPrice>R$ {product.currentPrice}</CurrentPrice>
+            <CurrentPrice>R$ {product.currentPrice}.00</CurrentPrice>
             <OldPrice>R$ {product.originalPrice}</OldPrice>
           </ProductPrice>
 
