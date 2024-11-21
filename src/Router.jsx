@@ -31,8 +31,6 @@ export function Router() {
         <Route path="/cadastro" element={<RegisterPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
-      {/* Rota de teste */}
-      <Route path="/form/form" element={<CheckoutForm />} />
     </Routes>
   );
 }

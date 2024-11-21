@@ -1,23 +1,8 @@
+import { ButtonEmpty, CartButton, CartButtons, CartContent, CartImage, CartInfos, CartPrice, EmptyCart,ItemsContainer, ModalContainer, ProductInfos, ProductPrice, RemoveButton } from "./style";
 import { useCart } from "@/contexts/CartContext";
-import {
-  ButtonEmpty,
-  CartButton,
-  CartButtons,
-  CartContent,
-  CartImage,
-  CartInfos,
-  CartPrice,
-  EmptyCart,
-  ItemsContainer,
-  ModalContainer,
-  ProductInfos,
-  ProductPrice,
-  RemoveButton,
-} from "./style";
 
 export function CartModal({ isOpen }) {
   const { products, setProducts } = useCart();
-
   if (!isOpen) return null;
 
   const handleRemoveProduct = (productId) => {
