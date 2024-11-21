@@ -92,12 +92,6 @@ export const BtnHome = styled(Button)`
     margin: 0 2rem;
 `;
 
-export const MiniCartIcon = styled.img`
-    height: 2rem; 
-    width: auto; 
-    cursor: pointer;
-`;
-
 export const CartIconWrapper = styled.div`
   position: relative;
   cursor: pointer;

@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 
 const CategoryContainer = styled.div`
@@ -17,7 +16,7 @@ const CategoryContainer = styled.div`
 export function CategoryPage() {
   return (
     <CategoryContainer>
-      <h2>Não existe á página de Categorias</h2>
+      <h2>Não existe a página de Categorias</h2>
     </CategoryContainer>
   );
 }

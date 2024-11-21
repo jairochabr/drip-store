@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   display: flex;
-  background-color: #f9f8fe;
+  /* background-color: #f9f8fe; */
   padding: 10rem;
 `;
 
