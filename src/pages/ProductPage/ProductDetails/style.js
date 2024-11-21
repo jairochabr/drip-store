@@ -6,10 +6,8 @@ export const ResultsText = styled.span`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.darkGray3};
   cursor: pointer;
-  position: absolute;
-  top: 8rem; /* Alinha no topo */
-  right: 83.5rem; /* Move para a direita */
-  /* ou left: auto; */
+  right: 83.5rem;
+  margin-inline: 15.3rem;
   span {
     color: ${({ theme }) => theme.colors.darkGray};
     font-weight: bold;
@@ -18,16 +16,15 @@ export const ResultsText = styled.span`
 
 export const CarouselContainer = styled.div`
   display: flex;
-  gap: 10rem;
-  max-width: 1400px;
+  max-width: 1410px;
   margin: 0 auto;
   background-color: #f8f9fb;
 
-  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 10rem;
+  margin-top: 4rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.lightGray};
+  margin-right: 2rem;
 `;
 
 export const CarouselImages = styled.div`
@@ -74,14 +71,16 @@ export const Arrow = styled.button`
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: ${({ theme }) => theme.colors.darkGray2};
+
+  margin-top: -4rem;
 
   &.prev {
-    left: -25px;
+    left: 5.5rem;
   }
 
   &.next {
-    right: -25px;
+    right: 5.5rem;
   }
 `;
 
@@ -124,7 +123,8 @@ export const RelatedProductsHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: -8rem;
-  margin-inline: 12rem;
+  margin-inline: 15rem;
+  cursor: pointer;
 
   h2 {
     font-size: 2.4rem;
