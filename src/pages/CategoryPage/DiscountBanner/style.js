@@ -3,28 +3,27 @@ import styled from "styled-components";
 // Container geral do banner
 export const BannerContainer = styled.div`
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Alinha verticalmente ao centro */
-  background-color: ${({ theme }) =>
-    theme.colors.primary}; /* Cor de fundo do banner */
-  padding: 20px 40px; /* Ajustando o padding */
-  margin-bottom: 20px; /* Espaçamento abaixo do banner */
-  width: 100%; /* Garantir que o container ocupe toda a largura */
-  height: 200px; /* Definindo a altura do banner */
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
   cursor: pointer;
 `;
 
 // Texto principal do banner
 export const BannerText = styled.p`
-  font-size: 4.5rem; /* Aumentando o tamanho da fonte */
+  font-size: 4.5rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.white};
   margin: 0;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 
   strong {
-    color: yellow; /* Cor do destaque para o 45% OFF */
-    animation: blink 1s infinite; /* Animação de piscar */
+    color: yellow;
+    animation: blink 1s infinite;
   }
 
   @keyframes blink {
@@ -42,7 +41,7 @@ export const BannerText = styled.p`
 
 // Botão do banner
 export const Button = styled.button`
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.darkGray};
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
@@ -50,9 +49,10 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5rem; /* Espaço entre o texto e o botão */
+  margin-left: 5rem;
+  transition: transform 0.3s ease;
 
   &:hover {
-    background-color: #333; /* Cor do botão ao passar o mouse */
+    transform: scale(1.1);
   }
 `;

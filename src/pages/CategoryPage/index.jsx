@@ -2,7 +2,7 @@ import { ProductCard } from "@/components/@ui/ProductCard";
 import { ProductsContainer, CategoryTitle } from "./style";
 import { motion } from "framer-motion";
 import { TENNIS } from "@/assets";
-import { DiscountBanner } from "./DiscountBanner"; // Importando o DiscountBanner
+import { DiscountBanner } from "./DiscountBanner";
 
 export function CategoryPage() {
   // Definindo os produtos de cada categoria
@@ -260,7 +260,7 @@ export function CategoryPage() {
                 initial={{ opacity: 0, x: -50 }} // Começa invisível e deslocado para a esquerda
                 whileInView={{ opacity: 1, x: 0 }} // Quando entra na tela, se torna visível e se move para a posição inicial
                 viewport={{ once: false }} // Permite que o efeito aconteça várias vezes ao rolar
-                transition={{ duration: 1, ease: "easeInOut" }} // Lento e suave
+                transition={{ duration: 1, ease: "easeInOut" }}
               >
                 <ProductCard product={product} />
               </motion.div>
