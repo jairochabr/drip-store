@@ -9,10 +9,10 @@ export const FooterStyle = styled.footer`
 
 export const FooterContent = styled.div`
   display: flex;
-  justify-content: space-between; /* Ajuste para distribuir igualmente */
+  justify-content: space-around;
   align-items: flex-start;
-  margin-left: 20rem;
-  margin-top: 4rem;
+  margin-left: 11.5rem;
+  margin-top: 2rem;
 `;
 
 export const FooterLogo = styled.div`
