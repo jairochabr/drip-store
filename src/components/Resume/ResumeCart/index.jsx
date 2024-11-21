@@ -15,7 +15,7 @@ export function ResumeCart({
   desconto,
   total,
   parcelas,
-  buttonLabel,
+  buttonLabel= 'Continuar'
 }) {
   return (
     <ResumeContainer>
@@ -41,7 +41,7 @@ export function ResumeCart({
           <span>{parcelas}</span>
         </div>
       </Total>
-      <CustomButton variant='secondary' size='large'>
+      <CustomButton variant='secondary' size='large' to="/produtos/finalizar"> 
         {buttonLabel}
       </CustomButton>
     </ResumeContainer>

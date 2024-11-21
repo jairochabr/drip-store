@@ -126,6 +126,8 @@ export const Total = styled.div`
 `;
 
 export const CustomButton = styled(Button)`
+  display: flex;
+  justify-content: center;
  width: 27.4rem;
  height: 4rem;
 `;

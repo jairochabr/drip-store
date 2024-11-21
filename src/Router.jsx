@@ -10,6 +10,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import CheckoutForm from "./pages/CheckoutForm";
+import { CartPage } from "./pages/CartPage";
 
 export function Router() {
   return (
@@ -19,6 +20,8 @@ export function Router() {
         <Route path="/produtos">
           <Route index element={<ProductPage />} />
           <Route path=":id" element={<ProductDetails />} />
+          <Route path="carrinho" element={<CartPage />} />
+          <Route path="finalizar" element={<CheckoutForm />} />
         </Route>
         <Route path="/categorias" element={<CategoryPage />} />
         <Route path="/pedidos" element={<OrderPage />} />
