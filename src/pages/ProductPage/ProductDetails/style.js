@@ -157,6 +157,7 @@ export const ProductGrid = styled.div`
   align-items: flex-start;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  background-color: #f8f9fb;
 `;
 
 export const TextContent = styled.div`
