@@ -25,6 +25,7 @@ import {
 } from "./style";
 import { TENNIS } from "@/assets"; // Importe suas imagens de assets
 import { ProductCard } from "@/components/@ui/ProductCard";
+import { useCart } from "@/contexts/CartContext";
 
 const products = [
   {
@@ -64,6 +65,7 @@ const products = [
 ];
 
 export const ProductDetails = () => {
+  const { addToCart } = useCart();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -137,8 +139,8 @@ export const ProductDetails = () => {
     } else if (!selectedColor) {
       toast.error("Escolha uma cor para o produto.");
     } else {
+      addToCart();
       toast.success("Produto adicionado com sucesso!");
-
       // Resetar todos os estados após a compra
       setSelectedSize(null);
       setSelectedColor(null);
