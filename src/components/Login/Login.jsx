@@ -1,40 +1,55 @@
 import { Link } from "react-router-dom";
 import Gmail from "../../assets/Login-fotos/gmail.png";
 import Facebook from "../../assets/Login-fotos/facebook.svg";
+import Sapato1 from "../../assets/Login-fotos/sapato1.svg";
+import Sapato2 from "../../assets/Login-fotos/sapato2.svg";
 import { LoginContainer } from "./style"
 
 export function Login() {
     return (
         <LoginContainer>
-            <h3 className='AcesseSuaConta'>Acesse sua conta</h3>
+            <div className="sign-in-container">
 
-            <p className="NovoCliente">Novo cliente? Então registre-se <Link className="CliqueAqui" to='registro'>aqui</Link>. </p>
-           
-            <form className="FormLogin">
-                
-                 <label className="LoginLabel">Login *</label>
-                 <input className= "InputLoginSenha"type="text" placeholder="Insira seu login ou email" />
-              
-                    <label className="LoginLabel">Senha *</label>
-                    <input className="InputLoginSenha" type="password" placeholder="Insira sua senha" />
+                <div className="BoxLogin">
 
-                
-                <Link className="LinkAqui">Esqueci minha senha</Link>
-                <button className="Button-Acesse">Acessar Conta</button>
-            </form>
+                    <h3 className="AcesseSuaConta">Acesse sua conta</h3>
 
-            {/* <div className="div-Login4"> */}
-            <p className="realizar-login-p">Ou faça login com</p>
-                    {/* <div>
-                        <p>Ou faça login com</p>
-                        <img src={Gmail} alt="Gmail" />
-                        <img src={Facebook} alt="logo do facebook"/>
+                    <p className="NovoCliente">Novo cliente? Então registre-se <Link className="CliqueAqui" to='/cadastro'>aqui</Link>. </p>
 
-                    </div> */}
+                    <form className="FormLogin">
+
+                        <label className="LoginLabel">Login *</label>
+                        <input className="InputLoginSenha" type="text" placeholder="Insira seu login ou email" />
+
+                        <label className="LoginLabel">Senha *</label>
+                        <input className="InputLoginSenha" type="password" placeholder="Insira sua senha" />
 
 
+                        <Link className="LinkAqui">Esqueci minha senha</Link>
+                        <button className="Button-Acesse">Acessar Conta</button>
+                    </form>
 
-            {/* </div> */}
+                    <div className="div-Login4">
+
+                        <div className="realizar-login-p"> 
+                            <p className="Cor"> Ou faça login com </p>
+                            <img src={Gmail} alt="Gmail" />
+                            <img src={Facebook} alt="logo do facebook" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {/* <div > */}
+                    <img className="SapatoLogin1" src={Sapato1} />
+                    <img className="SapatoLogin2" src={Sapato2} />
+
+
+                {/* </div> */}
+
+            </div>
+
         </LoginContainer>
     );
-}
+};

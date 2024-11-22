@@ -1,5 +1,15 @@
+import { Footer } from "../../components/Footer/Footer.jsx";
+import { Register } from "../../components/Register/Register.jsx";
+
 export function RegisterPage() {
   return (
-    <h1>RegisterPage</h1>
-  )
-}
+      <> 
+
+    <Register />
+    <Footer />
+
+    </>
+
+
+  );
+};
