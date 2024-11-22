@@ -1,13 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import { DiscountStyle, ProductCardStyle, ProductImage, ProductInfos, ProductPrice } from "./style";
+import {
+  DiscountStyle,
+  ProductCardStyle,
+  ProductImage,
+  ProductInfos,
+  ProductPrice,
+} from "./style";
 
 export function ProductCard({ product }) {
   const navigate = useNavigate();
-  const { id, name, category, originalPrice, currentPrice, discount, image } = product;
+  const { id, name, category, originalPrice, currentPrice, discount, image } =
+    product;
 
   const handleClick = () => {
     // console.log('ID do produto:', id);
-    navigate(`/produtos/${id}`)
+    navigate(`/produtos/${id}`);
   };
 
   const formatPrice = (price) => {
