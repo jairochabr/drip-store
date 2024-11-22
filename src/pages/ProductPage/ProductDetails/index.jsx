@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Para navegação
+import { ToastContainer, toast } from "react-toastify"; // Importando o Toastify
+import "react-toastify/dist/ReactToastify.css"; // Estilos do Toastify
 import {
   ResultsText,
   CarouselContainer,
@@ -23,6 +25,7 @@ import {
 } from "./style";
 import { TENNIS } from "@/assets"; // Importe suas imagens de assets
 import { ProductCard } from "@/components/@ui/ProductCard";
+import { useCart } from "@/contexts/CartContext";
 
 const products = [
   {
@@ -62,6 +65,7 @@ const products = [
 ];
 
 export const ProductDetails = () => {
+  const { addToCart } = useCart();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -129,14 +133,14 @@ export const ProductDetails = () => {
 
   const handleBuyClick = () => {
     if (!selectedSize && !selectedColor) {
-      alert("Selecione um tamanho e uma cor.");
+      toast.error("Selecione o tamanho e a cor.");
     } else if (!selectedSize) {
-      alert("Selecione um tamanho.");
+      toast.error("Escolha um tamanho para o produto.");
     } else if (!selectedColor) {
-      alert("Selecione uma cor.");
+      toast.error("Escolha uma cor para o produto.");
     } else {
-      alert("Compra realizada com sucesso!");
-
+      addToCart();
+      toast.success("Produto adicionado com sucesso!");
       // Resetar todos os estados após a compra
       setSelectedSize(null);
       setSelectedColor(null);
@@ -244,7 +248,7 @@ export const ProductDetails = () => {
               ))}
             </ColorOptions>
           </div>
-          <BuyButton onClick={handleBuyClick}>COMPRAR</BuyButton>
+          <BuyButton onClick={handleBuyClick}>ADICIONAR</BuyButton>
         </TextContent>
       </CarouselContainer>
 
@@ -258,6 +262,9 @@ export const ProductDetails = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </ProductGrid>
+
+      {/* ToastContainer para exibir os toasts */}
+      <ToastContainer position="top-right" autoClose={4000} />
     </>
   );
 };

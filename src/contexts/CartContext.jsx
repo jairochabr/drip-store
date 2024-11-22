@@ -1,5 +1,5 @@
-import { TENNIS } from '@/assets';
-import { createContext, useContext, useState } from 'react';
+import { TENNIS } from "@/assets";
+import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
@@ -26,24 +26,21 @@ export function CartProvider({ children }) {
       originalPrice: 219.0,
       image: TENNIS.sneakers,
     },
-    {
-      id: 4,
-      name: "Tênis Nike Revolution 6 Next Nature Masculino",
-      price: 219.0,
-      originalPrice: 219.0,
-      image: TENNIS.dunkHigh,
-    },
-    {
-      id: 5,
+  ]);
+
+  const addToCart = () => {
+    const newProduct = {
+      id: Date.now(), // Garante ID único
       name: "Tênis Nike Revolution 6 Next Nature Masculino",
       price: 219.0,
       originalPrice: 219.0,
       image: TENNIS.sneakers,
-    },
-  ]);
+    };
+    setProducts((prevProducts) => [...prevProducts, newProduct]);
+  };
 
   return (
-    <CartContext.Provider value={{ products, setProducts }}>
+    <CartContext.Provider value={{ products, setProducts, addToCart }}>
       {children}
     </CartContext.Provider>
   );
