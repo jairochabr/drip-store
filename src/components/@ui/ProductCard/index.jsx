@@ -1,11 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import {
-  DiscountStyle,
-  ProductCardStyle,
-  ProductImage,
-  ProductInfos,
-  ProductPrice,
-} from "./style";
+import { DiscountStyle, ProductCardStyle, ProductImage, ProductInfos, ProductPrice } from "./style";
 
 export function ProductCard({ product }) {
   const navigate = useNavigate();

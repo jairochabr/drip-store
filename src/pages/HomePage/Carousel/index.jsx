@@ -1,5 +1,5 @@
 import { SLIDES } from "@/constants";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as Styled from "./style";
 
 const SLIDE_INTERVAL = 5000;
@@ -10,10 +10,10 @@ export function Carousel() {
   const [transition, setTransition] = useState(true);
   const slidesToRender = [...SLIDES, SLIDES[0]];
 
-  const nextSlide = useCallback(() => {
+  const nextSlide = () => {
     setCurrentIndex(prevIndex => prevIndex === TOTAL_SLIDES ? 0 : prevIndex + 1);
     setTransition(currentIndex < TOTAL_SLIDES);
-  }, [currentIndex]);
+  };
 
   useEffect(() => {
     const interval = setInterval(nextSlide, SLIDE_INTERVAL);
